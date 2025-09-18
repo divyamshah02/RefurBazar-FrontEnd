@@ -1,4 +1,50 @@
+// Import Swiper from CDN or local file
+// Assuming Swiper is imported via CDN, no need to declare it here
+
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize Swiper for Hero Slider
+  const heroSwiper = new window.Swiper(".heroSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 4000, // Auto-slide every 4 seconds
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 1000,
+    on: {
+      init: () => {
+        console.log("Hero slider initialized successfully for vertical layout")
+      },
+      slideChange: function () {
+        // Enhanced slide change animations
+        const activeSlide = this.slides[this.activeIndex]
+        const slideContent = activeSlide.querySelector(".slide-content")
+        if (slideContent) {
+          slideContent.style.opacity = "0"
+          slideContent.style.transform = "translateY(30px)"
+          setTimeout(() => {
+            slideContent.style.transition = "all 0.8s ease"
+            slideContent.style.opacity = "1"
+            slideContent.style.transform = "translateY(0)"
+          }, 200)
+        }
+      },
+    },
+  })
+
   // Enhanced search functionality
   const searchInput = document.querySelector(".search-input")
   const searchBtn = document.querySelector(".search-btn")
