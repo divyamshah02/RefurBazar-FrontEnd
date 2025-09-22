@@ -4926,7 +4926,7 @@ body {
 /* Adding product detail page styles */
 .product-gallery {
   position: sticky;
-  top: 2rem;
+  top: 11rem;
 }
 
 .main-image {
@@ -4939,8 +4939,8 @@ body {
 
 .main-image img {
   width: 100%;
-  height: 500px;
-  object-fit: cover;
+  height: 700px;
+  object-fit: contain;
 }
 
 .image-badges {
