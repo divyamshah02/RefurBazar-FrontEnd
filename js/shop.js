@@ -563,7 +563,7 @@ function displayProducts(products) {
 
 function createProductCard(product) {
   const col = document.createElement("div")
-  col.className = "col-lg-4 col-md-6 mb-4"
+  col.className = "col-lg-3 col-md-6 col-sm-6 mb-4"
 
   const discountBadgeClass =
     product.condition === "excellent" ? "excellent" : product.condition === "verygood" ? "very-good" : "good"

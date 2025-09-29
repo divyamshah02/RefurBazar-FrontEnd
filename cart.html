@@ -108,7 +108,7 @@
                                 </div>
                                 <div class="category-card">
                                     <div class="category-image">
-                                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=150&h=100&fit=crop" alt="Gaming Laptops">
+                                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=150&h=100&fit=crop" alt="Gaming Laptops">
                                     </div>
                                     <h4>Gaming Laptops</h4>
                                 </div>
@@ -253,114 +253,211 @@
     </nav>
 
     <!-- Cart Page -->
-    <div class="container py-5" style="margin-top: 180px;">
+    <div class="container py-5" style="margin-top: 150px;">
         <div class="row">
+            <div class="cart-header mb-4">
+                <h2 class="fw-bold">Shopping Cart</h2>
+                <p class="text-muted mb-0">3 items in your cart</p>
+            </div>
             <div class="col-lg-8">
-                <div class="cart-header">
-                    <h2>Shopping Cart</h2>
-                    <p class="text-muted">3 items in your cart</p>
-                </div>
 
                 <div class="cart-items">
-                    <div class="cart-item">
-                        <div class="item-image">
-                            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=120&h=120&fit=crop" alt="iPhone 13 Pro">
-                        </div>
-                        <div class="item-details">
-                            <h5>iPhone 13 Pro - 128GB Midnight</h5>
-                            <p class="text-muted">Excellent Condition • Unlocked</p>
-                            <div class="item-features">
-                                <span class="feature-badge">1 Year Warranty</span>
-                                <span class="feature-badge">Free Shipping</span>
+                    <div class="cart-item-wrapper mb-4">
+                        <div class="cart-item">
+                            <div class="item-image-container">
+                                <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=120&h=120&fit=crop" alt="iPhone 13 Pro" class="item-image">
                             </div>
-                            <div class="item-actions mt-2">
-                                <button class="btn btn-link text-danger p-0" onclick="removeFromCart(1)">
-                                    <i class="fas fa-trash"></i> Remove
-                                </button>
-                                <button class="btn btn-link p-0 ms-3" onclick="moveToWishlist(1)">
-                                    <i class="fas fa-heart"></i> Move to Wishlist
-                                </button>
+                            <div class="item-details">
+                                <h5 class="item-title">iPhone 13 Pro - 128GB Midnight</h5>
+                                <p class="item-condition">Excellent Condition • Unlocked</p>
+                                <div class="item-features">
+                                    <span class="feature-badge">1 Year Warranty</span>
+                                    <span class="feature-badge">Free Shipping</span>
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn btn-link text-danger p-0" onclick="removeFromCart(1)">
+                                        <i class="fas fa-trash"></i> Remove
+                                    </button>
+                                    <button class="btn btn-link p-0 ms-3" onclick="moveToWishlist(1)">
+                                        <i class="fas fa-heart"></i> Move to Wishlist
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="item-quantity">
+                                <div class="quantity-controls">
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(1, -1)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(1, 1)">+</button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <div class="current-price">₹65,999</div>
+                                <div class="original-price">₹1,29,900</div>
+                                <div class="savings">You save ₹63,901</div>
                             </div>
                         </div>
-                        <div class="item-quantity">
-                            <div class="quantity-controls">
-                                <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(1, -1)">-</button>
-                                <span class="quantity">1</span>
-                                <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(1, 1)">+</button>
+                        
+                        <div class="bought-together-section">
+                            <div class="bought-together-header">
+                                <i class="fas fa-plus-circle text-primary me-2"></i>
+                                <span class="fw-semibold">Frequently bought together</span>
                             </div>
-                        </div>
-                        <div class="item-price">
-                            <div class="current-price">₹65,999</div>
-                            <div class="original-price">₹1,29,900</div>
-                            <div class="savings">You save ₹63,901</div>
+                            <div class="bought-together-items">
+                                <div class="together-item">
+                                    <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=60&h=60&fit=crop" alt="iPhone Case">
+                                    <div class="together-details">
+                                        <h6>iPhone 13 Pro Case</h6>
+                                        <span class="together-price">₹1,299</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-sm">Add</button>
+                                </div>
+                                <div class="together-item">
+                                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=60&h=60&fit=crop" alt="Screen Protector">
+                                    <div class="together-details">
+                                        <h6>Tempered Glass</h6>
+                                        <span class="together-price">₹599</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-sm">Add</button>
+                                </div>
+                                <div class="together-item">
+                                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=60&h=60&fit=crop" alt="Wireless Charger">
+                                    <div class="together-details">
+                                        <h6>Wireless Charger</h6>
+                                        <span class="together-price">₹2,499</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-sm">Add</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="cart-item">
-                        <div class="item-image">
-                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=120&h=120&fit=crop" alt="MacBook Air M1">
-                        </div>
-                        <div class="item-details">
-                            <h5>MacBook Air M1 - 256GB Silver</h5>
-                            <p class="text-muted">Very Good Condition • 13-inch</p>
-                            <div class="item-features">
-                                <span class="feature-badge">1 Year Warranty</span>
-                                <span class="feature-badge">Free Shipping</span>
+                    <div class="cart-item-wrapper mb-4">
+                        <div class="cart-item">
+                            <div class="item-image-container">
+                                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=120&h=120&fit=crop" alt="MacBook Air M1" class="item-image">
                             </div>
-                            <div class="item-actions mt-2">
-                                <button class="btn btn-link text-danger p-0" onclick="removeFromCart(2)">
-                                    <i class="fas fa-trash"></i> Remove
-                                </button>
-                                <button class="btn btn-link p-0 ms-3" onclick="moveToWishlist(2)">
-                                    <i class="fas fa-heart"></i> Move to Wishlist
-                                </button>
+                            <div class="item-details">
+                                <h5 class="item-title">MacBook Air M1 - 256GB Silver</h5>
+                                <p class="item-condition">Very Good Condition • 13-inch</p>
+                                <div class="item-features">
+                                    <span class="feature-badge">1 Year Warranty</span>
+                                    <span class="feature-badge">Free Shipping</span>
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn btn-link text-danger p-0" onclick="removeFromCart(2)">
+                                        <i class="fas fa-trash"></i> Remove
+                                    </button>
+                                    <button class="btn btn-link p-0 ms-3" onclick="moveToWishlist(2)">
+                                        <i class="fas fa-heart"></i> Move to Wishlist
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="item-quantity">
+                                <div class="quantity-controls">
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(2, -1)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(2, 1)">+</button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <div class="current-price">₹89,999</div>
+                                <div class="original-price">₹1,14,900</div>
+                                <div class="savings">You save ₹24,901</div>
                             </div>
                         </div>
-                        <div class="item-quantity">
-                            <div class="quantity-controls">
-                                <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(2, -1)">-</button>
-                                <span class="quantity">1</span>
-                                <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(2, 1)">+</button>
+                        
+                        <div class="bought-together-section">
+                            <div class="bought-together-header">
+                                <i class="fas fa-plus-circle text-primary me-2"></i>
+                                <span class="fw-semibold">Frequently bought together</span>
                             </div>
-                        </div>
-                        <div class="item-price">
-                            <div class="current-price">₹89,999</div>
-                            <div class="original-price">₹1,14,900</div>
-                            <div class="savings">You save ₹24,901</div>
+                            <div class="bought-together-items">
+                                <div class="together-item">
+                                    <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=60&h=60&fit=crop" alt="MacBook Sleeve">
+                                    <div class="together-details">
+                                        <h6>MacBook Sleeve</h6>
+                                        <span class="together-price">₹2,999</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-sm">Add</button>
+                                </div>
+                                <div class="together-item">
+                                    <img src="https://images.unsplash.com/photo-1615750185825-9c4c0e5b8b8e?w=60&h=60&fit=crop" alt="USB-C Hub">
+                                    <div class="together-details">
+                                        <h6>USB-C Hub</h6>
+                                        <span class="together-price">₹3,499</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-sm">Add</button>
+                                </div>
+                                <div class="together-item">
+                                    <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=60&h=60&fit=crop" alt="Wireless Mouse">
+                                    <div class="together-details">
+                                        <h6>Wireless Mouse</h6>
+                                        <span class="together-price">₹1,999</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-sm">Add</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="cart-item">
-                        <div class="item-image">
-                            <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=120&h=120&fit=crop" alt="AirPods Pro">
-                        </div>
-                        <div class="item-details">
-                            <h5>AirPods Pro (2nd Generation)</h5>
-                            <p class="text-muted">Excellent Condition • With Case</p>
-                            <div class="item-features">
-                                <span class="feature-badge">6 Month Warranty</span>
-                                <span class="feature-badge">Free Shipping</span>
+                    <div class="cart-item-wrapper mb-4">
+                        <div class="cart-item">
+                            <div class="item-image-container">
+                                <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=120&h=120&fit=crop" alt="AirPods Pro" class="item-image">
                             </div>
-                            <div class="item-actions mt-2">
-                                <button class="btn btn-link text-danger p-0" onclick="removeFromCart(3)">
-                                    <i class="fas fa-trash"></i> Remove
-                                </button>
-                                <button class="btn btn-link p-0 ms-3" onclick="moveToWishlist(3)">
-                                    <i class="fas fa-heart"></i> Move to Wishlist
-                                </button>
+                            <div class="item-details">
+                                <h5 class="item-title">AirPods Pro (2nd Generation)</h5>
+                                <p class="item-condition">Excellent Condition • With Case</p>
+                                <div class="item-features">
+                                    <span class="feature-badge">6 Month Warranty</span>
+                                    <span class="feature-badge">Free Shipping</span>
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn btn-link text-danger p-0" onclick="removeFromCart(3)">
+                                        <i class="fas fa-trash"></i> Remove
+                                    </button>
+                                    <button class="btn btn-link p-0 ms-3" onclick="moveToWishlist(3)">
+                                        <i class="fas fa-heart"></i> Move to Wishlist
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="item-quantity">
+                                <div class="quantity-controls">
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(3, -1)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(3, 1)">+</button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <div class="current-price">₹18,999</div>
+                                <div class="original-price">₹24,900</div>
+                                <div class="savings">You save ₹5,901</div>
                             </div>
                         </div>
-                        <div class="item-quantity">
-                            <div class="quantity-controls">
-                                <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(3, -1)">-</button>
-                                <span class="quantity">1</span>
-                                <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(3, 1)">+</button>
+                        
+                        <div class="bought-together-section">
+                            <div class="bought-together-header">
+                                <i class="fas fa-plus-circle text-primary me-2"></i>
+                                <span class="fw-semibold">Frequently bought together</span>
                             </div>
-                        </div>
-                        <div class="item-price">
-                            <div class="current-price">₹18,999</div>
-                            <div class="original-price">₹24,900</div>
-                            <div class="savings">You save ₹5,901</div>
+                            <div class="bought-together-items">
+                                <div class="together-item">
+                                    <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=60&h=60&fit=crop" alt="AirPods Case">
+                                    <div class="together-details">
+                                        <h6>AirPods Case</h6>
+                                        <span class="together-price">₹899</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-sm">Add</button>
+                                </div>
+                                <div class="together-item">
+                                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=60&h=60&fit=crop" alt="Cleaning Kit">
+                                    <div class="together-details">
+                                        <h6>Cleaning Kit</h6>
+                                        <span class="together-price">₹499</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-sm">Add</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -377,42 +474,42 @@
 
             <div class="col-lg-4">
                 <div class="cart-summary">
-                    <h5>Order Summary</h5>
+                    <h5 class="fw-bold mb-4">Order Summary</h5>
                     
                     <div class="summary-row">
                         <span>Subtotal (3 items)</span>
-                        <span>₹1,74,997</span>
+                        <span class="fw-semibold">₹1,74,997</span>
                     </div>
                     <div class="summary-row">
                         <span>Shipping</span>
-                        <span class="text-success">Free</span>
+                        <span class="text-success fw-semibold">Free</span>
                     </div>
                     <div class="summary-row">
                         <span>Tax</span>
-                        <span>₹31,499</span>
+                        <span class="fw-semibold">₹31,499</span>
                     </div>
-                    <div class="summary-row discount">
+                    <!-- <div class="summary-row discount">
                         <span>Discount</span>
-                        <span class="text-success">-₹5,000</span>
-                    </div>
-                    <hr>
+                        <span class="text-success fw-semibold">-₹5,000</span>
+                    </div> -->
+                    <!-- <hr class="my-3"> -->
                     <div class="summary-row total">
-                        <span>Total</span>
-                        <span>₹2,01,496</span>
+                        <span class="fw-bold">Total</span>
+                        <span class="fw-bold fs-5">₹2,01,496</span>
                     </div>
                     <div class="total-savings">
-                        <small class="text-success">You save ₹94,703 compared to new!</small>
+                        <small class="text-success fw-semibold">You save ₹94,703 compared to new!</small>
                     </div>
 
-                    <div class="promo-code mt-3">
+                    <div class="promo-code mt-4">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Enter promo code">
                             <button class="btn btn-outline-primary" type="button">Apply</button>
                         </div>
                     </div>
 
-                    <a href="checkout.html" class="btn btn-primary btn-lg w-100 mt-3">
-                        Proceed to Checkout
+                    <a href="checkout.html" class="btn btn-primary btn-lg w-100 mt-4">
+                        <i class="fas fa-lock me-2"></i>Proceed to Checkout
                     </a>
 
                     <div class="payment-options mt-3">
@@ -443,9 +540,8 @@
             </div>
         </div>
 
-        <!-- Recommended Products -->
         <div class="recommended-section mt-5">
-            <h4>You might also like</h4>
+            <h4 class="fw-bold mb-4">You might also like</h4>
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="product-card">

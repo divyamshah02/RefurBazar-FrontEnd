@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCart()
   updateCartSummary()
   initializePromoCode()
+  initializeBoughtTogether() // Initialize bought together functionality
 })
 
 function initializeCart() {
@@ -217,4 +218,33 @@ function createToastContainer() {
   container.style.marginTop = "100px"
   document.body.appendChild(container)
   return container
+}
+
+function addTogetherItem(itemName, price) {
+  showToast(`${itemName} added to cart!`, "success")
+  // Update cart count
+  const cartBadge = document.querySelector("#cartCount")
+  if (cartBadge) {
+    const currentCount = Number.parseInt(cartBadge.textContent)
+    cartBadge.textContent = currentCount + 1
+  }
+  updateCartSummary()
+}
+
+function initializeBoughtTogether() {
+  const addButtons = document.querySelectorAll(".together-item .btn")
+  addButtons.forEach((button, index) => {
+    button.addEventListener("click", function () {
+      const item = this.closest(".together-item")
+      const itemName = item.querySelector("h6").textContent
+      const itemPrice = item.querySelector(".together-price").textContent
+      addTogetherItem(itemName, itemPrice)
+
+      // Disable button and show added state
+      this.textContent = "Added"
+      this.classList.remove("btn-outline-primary")
+      this.classList.add("btn-success")
+      this.disabled = true
+    })
+  })
 }
