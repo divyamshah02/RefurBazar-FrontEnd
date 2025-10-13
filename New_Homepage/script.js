@@ -799,6 +799,34 @@ document.addEventListener("DOMContentLoaded", () => {
   window.removeDeviceFromSetup = removeDeviceFromSetup
 
   // ===================================
+  // AI Shopping Assistant Step Toggle
+  // ===================================
+  document.querySelectorAll(".ai-step .step-header").forEach((header) => {
+    header.addEventListener("click", function () {
+      const step = this.closest(".ai-step")
+      const content = step.querySelector(".step-content")
+      const toggle = step.querySelector(".step-toggle i")
+      const isActive = step.classList.contains("active")
+
+      // Close all steps
+      document.querySelectorAll(".ai-step").forEach((s) => {
+        s.classList.remove("active")
+        s.querySelector(".step-content").style.display = "none"
+        s.querySelector(".step-toggle i").classList.remove("bi-dash")
+        s.querySelector(".step-toggle i").classList.add("bi-plus")
+      })
+
+      // Open clicked step if it wasn't active
+      if (!isActive) {
+        step.classList.add("active")
+        content.style.display = "block"
+        toggle.classList.remove("bi-plus")
+        toggle.classList.add("bi-dash")
+      }
+    })
+  })
+
+  // ===================================
   // Console Welcome Message
   // ===================================
   console.log("%c🌿 Welcome to RefurBazaar! 🌿", "color: #6BA843; font-size: 20px; font-weight: bold;")
