@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bh-app-card {
+  background: linear-gradient(135deg, #552d14 0%, #6b3a1a 100%);
+  border-radius: 18px;
+  padding: 32px;
+  max-width: 420px;
+  color: #f9e7c7;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.bh-app-content h3 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.bh-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  opacity: 0.95;
+}
+
+.bh-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 24px;
+}
+
+.bh-store-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9e7c7;
+  border-radius: 10px;
+  padding: 10px 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.store-btn img {
+  height: 40px;
+}
+
+.store-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+    </style>
+</head>
+<body>
+    <div class="bh-app-card">
+  <div class="bh-app-content">
+    <h3>BakersHub</h3>
+    <p class="bh-subtitle">Built for bakers who run real businesses.</p>
+    <p class="bh-desc">
+      Manage orders, pricing, and daily workflows — without spreadsheets or chaos.
+    </p>
+
+    <div class="bh-store-buttons">
+      <a href="#" class="store-btn ios">
+        <img src="/static/appstore.svg" alt="Download on App Store">
+      </a>
+      <a href="#" class="store-btn android">
+        <img src="/static/playstore.svg" alt="Get it on Google Play">
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
