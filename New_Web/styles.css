@@ -90,7 +90,7 @@ h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
 }
 h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 1.5rem);
 }
 h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
@@ -543,30 +543,23 @@ img {
   flex-shrink: 0;
 }
 
-.discount-badge {
-  background: var(--accent-pink);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 10px;
-}
+/* Removed discount-badge styles completely */
 
 .product-title {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
-  /* Adjusted min-height for better card balance */
   min-height: 40px;
   color: var(--dark);
+  line-height: 1.4;
 }
 
+/* Added new product-specs styles for storage, RAM, and color display */
 .product-specs {
   font-size: 13px;
   color: var(--gray);
   margin-bottom: 10px;
+  min-height: 18px;
 }
 
 .color-options {
@@ -595,13 +588,31 @@ img {
   font-weight: 500;
 }
 
+/* Added product-pricing container for price display */
+.product-pricing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+/* Added original-price style with strikethrough */
+.price-original {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Updated product-price style for INR currency */
 .product-price {
   font-size: 20px;
   font-weight: 700;
-  color: var(--dark);
+  color: var(--primary-green);
+  margin: 0;
   margin-bottom: 0;
-  margin-top: auto;
-  /* Added margin-top: auto to push price to bottom */
 }
 
 /* Category Cards */
