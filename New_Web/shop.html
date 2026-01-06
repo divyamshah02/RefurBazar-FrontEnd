@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - RefurBazaar</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Replaced header with index.html navbar -->
+    <!-- 1. Top Promotional Banner -->
+    <div class="promo-banner">
+        <div class="container-fluid px-4">
+            <p class="mb-0 text-center">GET 100 OFF YOUR ORDER WITH CODE <strong>REFUR100</strong> AND ENJOY 200
+                CASHBACK!</p>
+        </div>
+    </div>
+
+    <!-- 2. Primary Navigation (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container-fluid px-4 d-flex align-items-center">
+
+            <!-- LEFT -->
+            <div class="navbar-left d-flex align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="refurbazaar-20final-20logo.png" alt="RefurBazaar" height="125">
+                </a>
+            </div>
+
+            <!-- CENTER -->
+            <div class="navbar-center flex-grow-1 d-flex justify-content-center">
+                <div class="search-container">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="What are you looking for...">
+                        <button class="btn btn-search" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="navbar-right d-flex align-items-center">
+                <ul class="navbar-nav flex-row align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-user"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-heart"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- 3. Secondary Navigation (Category Nav) -->
+    <div class="secondary-nav">
+        <div class="container-fluid px-4">
+            <ul class="nav justify-content-center flex-wrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">End of Year Sale <i class="fas fa-fire"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">iPhones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Samsung</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">MacBooks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Laptops</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">iPads</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accessories and Audio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">For Businesses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Need Help?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">RefurBazaar Express <i class="fas fa-bolt"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shop Section -->
+    <section class="shop-section py-5">
+        <div class="container-fluid px-5">
+            <div class="row">
+                <!-- Filters Sidebar -->
+                <div class="col-lg-2 col-md-3 mb-4">
+                    <div class="filters-sidebar">
+                        <div class="filter-header">
+                            <h5>Filters</h5>
+                            <button class="btn btn-link btn-sm p-0 text-decoration-none" onclick="clearFilters()">Clear
+                                All</button>
+                        </div>
+
+                        <!-- Category Filter -->
+                        <div class="filter-section">
+                            <h6>Category</h6>
+                            <select class="form-select" id="categorySelect">
+                                <option value="Smartphones">Smartphones</option>
+                                <option value="Laptops">Laptops</option>
+                                <option value="Desktops">Desktops</option>
+                                <option value="Tablets">Tablets</option>
+                                <option value="Smart Watches">Smart Watches</option>
+                                <option value="Audio">Audio</option>
+                                <option value="Cameras">Cameras</option>
+                                <option value="Gaming Consoles">Gaming Consoles</option>
+                                <option value="Accessories & Bundles">Accessories & Bundles</option>
+                            </select>
+                        </div>
+
+                        <!-- Condition Filter -->
+                        <div class="filter-section">
+                            <h6>Condition</h6>
+                            <div class="filter-options">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="excellent">
+                                    <label class="form-check-label" for="excellent">
+                                        Excellent <span class="count" id="excellentCount">(0)</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="verygood">
+                                    <label class="form-check-label" for="verygood">
+                                        Very Good <span class="count" id="verygoodCount">(0)</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="good">
+                                    <label class="form-check-label" for="good">
+                                        Good <span class="count" id="goodCount">(0)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brand Filter -->
+                        <div class="filter-section">
+                            <h6>Brand</h6>
+                            <div class="filter-options" id="brandFilters">
+                                <!-- Dynamically populated -->
+                            </div>
+                        </div>
+
+                        <!-- Additional Filters (Dynamic) -->
+                        <div class="filter-section" id="additionalFiltersSection" style="display: none;">
+                            <h6 id="additionalFiltersTitle">Storage</h6>
+                            <div class="filter-options" id="additionalFilters">
+                                <!-- Dynamically populated -->
+                            </div>
+                        </div>
+
+                        <!-- Price Range Filter -->
+                        <div class="filter-section">
+                            <h6>Price Range</h6>
+                            <div class="price-range">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <input type="number" class="form-control form-control-sm" placeholder="Min"
+                                            id="minPrice">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="number" class="form-control form-control-sm" placeholder="Max"
+                                            id="maxPrice">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="col-lg-10 col-md-9">
+                    <div class="products-header">
+                        <div class="results-info">
+                            <h4 id="categoryTitle">Smartphones</h4>
+                            <p class="text-muted" id="resultsCount">Showing 1-6 of 6 results</p>
+                        </div>
+                        <div class="sort-options">
+                            <select class="form-select" id="sortBy">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest First</option>
+                                <option value="rating">Highest Rated</option>
+                            </select>
+                            <div class="view-toggle">
+                                <button class="btn btn-outline-secondary btn-sm active" onclick="setGridView()">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="setListView()">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products grid with dynamic content -->
+                    <div class="product-grid" id="productsGrid">
+                        <div class="row products-grid" id="productsContainer">
+                            <!-- Products will be dynamically populated with index.html style cards -->
+                        </div>
+                    </div>
+
+                    <!-- Empty state message -->
+                    <div class="empty-state text-center py-5" id="emptyState" style="display: none;">
+                        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                        <h4 class="text-muted">No products found</h4>
+                        <p class="text-muted">We don't have any products in this category yet. Check back soon!</p>
+                        <button class="btn btn-primary" onclick="clearFilters()">Clear Filters</button>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="pagination-nav mt-5" id="paginationNav">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Replaced footer with index.html footer -->
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container-fluid px-5">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <img src="refurbazaar-20final-20logo.png" alt="RefurBazaar" height="100" class="mb-3"
+                        style="filter: brightness(0) invert(1);">
+                    <p class="text-light">Your trusted marketplace for certified refurbished electronics. Quality
+                        devices at unbeatable prices.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none d-block mb-2">About Us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none d-block mb-2">How It Works</a></li>
+                        <li><a href="#" class="text-light text-decoration-none d-block mb-2">Quality Check</a></li>
+                        <li><a href="#" class="text-light text-decoration-none d-block mb-2">Warranty Info</a></li>
+                        <li><a href="#" class="text-light text-decoration-none d-block mb-2">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Customer Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none d-block mb-2">Contact Us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none d-block mb-2">Shipping Info</a></li>
+                        <li><a href="#" class="text-light text-decoration-none d-block mb-2">Returns & Refunds</a></li>
+                        <li><a href="#" class="text-light text-decoration-none d-block mb-2">FAQs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none d-block mb-2">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-light">Subscribe to get special offers and updates</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="payment-methods mt-4">
+                        <p class="small text-light mb-2">We Accept:</p>
+                        <i class="fab fa-cc-visa fa-2x text-light me-2"></i>
+                        <i class="fab fa-cc-mastercard fa-2x text-light me-2"></i>
+                        <i class="fab fa-cc-paypal fa-2x text-light"></i>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-light">
+
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-light">&copy; 2026 RefurBazaar. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                    <a href="#" class="text-light text-decoration-none">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Shop JavaScript -->
+    <script src="shop.js"></script>
+</body>
+
+</html>

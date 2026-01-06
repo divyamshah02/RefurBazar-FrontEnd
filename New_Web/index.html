@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RefurBazaar - Premium Refurbished Electronics</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,32 +19,35 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
-    <!-- Top Promotional Banner -->
+
+    <!-- 1. Top Promotional Banner -->
     <div class="promo-banner">
         <div class="container-fluid px-4">
-            <p class="mb-0 text-center">GET 100 OFF YOUR ORDER WITH CODE <strong>REFUR100</strong> AND ENJOY 200 CASHBACK!</p>
+            <p class="mb-0 text-center">GET 100 OFF YOUR ORDER WITH CODE <strong>REFUR100</strong> AND ENJOY 200
+                CASHBACK!</p>
         </div>
     </div>
-    
-    <!-- Navigation -->
+
+    <!-- 2. Primary Navigation (Navbar) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand" href="#">
-                <img src="refurbazaar-20final-20logo.png" alt="RefurBazaar" height="50">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="mx-auto search-container">
+        <div class="container-fluid px-4 d-flex align-items-center">
+
+            <!-- LEFT -->
+            <div class="navbar-left d-flex align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="refurbazaar-20final-20logo.png" alt="RefurBazaar" height="125">
+                </a>
+            </div>
+
+            <!-- CENTER -->
+            <div class="navbar-center flex-grow-1 d-flex justify-content-center">
+                <div class="search-container">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="What are you looking for...">
                         <button class="btn btn-search" type="button">
@@ -51,8 +55,11 @@
                         </button>
                     </div>
                 </div>
-                
-                <ul class="navbar-nav ms-auto align-items-center">
+            </div>
+
+            <!-- RIGHT -->
+            <div class="navbar-right d-flex align-items-center">
+                <ul class="navbar-nav flex-row align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="far fa-user"></i></a>
                     </li>
@@ -64,10 +71,11 @@
                     </li>
                 </ul>
             </div>
+
         </div>
     </nav>
-    
-    <!-- Secondary Navigation -->
+
+    <!-- 3. Secondary Navigation (Category Nav) -->
     <div class="secondary-nav">
         <div class="container-fluid px-4">
             <ul class="nav justify-content-center flex-wrap">
@@ -110,8 +118,8 @@
             </ul>
         </div>
     </div>
-    
-    <!-- Hero Carousel Section -->
+
+    <!-- 4. Hero Carousel Section -->
     <section class="hero-carousel-section">
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-indicators">
@@ -129,8 +137,10 @@
                                 <div class="col-lg-6">
                                     <div class="slide-content">
                                         <span class="slide-badge">New Arrival</span>
-                                        <h1 class="slide-title text-white">MacBook Pro M3<br><span class="gradient-blue-text">Like New, Half Price</span></h1>
-                                        <p class="slide-description">Experience premium performance without the premium price. Certified refurbished with 1-year warranty.</p>
+                                        <h1 class="slide-title text-white">MacBook Pro M3<br><span
+                                                class="gradient-blue-text">Like New, Half Price</span></h1>
+                                        <p class="slide-description">Experience premium performance without the premium
+                                            price. Certified refurbished with 1-year warranty.</p>
                                         <div class="slide-features">
                                             <div class="feature-item">
                                                 <i class="bi bi-check-circle-fill"></i>
@@ -162,7 +172,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="slide-image">
-                                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80" alt="MacBook Pro" class="floating-image">
+                                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80"
+                                            alt="MacBook Pro" class="floating-image">
                                         <div class="image-badge badge-1">
                                             <i class="bi bi-shield-check"></i>
                                             <span>Certified</span>
@@ -186,8 +197,10 @@
                                 <div class="col-lg-6">
                                     <div class="slide-content">
                                         <span class="slide-badge">Best Seller</span>
-                                        <h1 class="slide-title text-white">iPhone 15 Pro<br><span class="gradient-text">Premium Quality, Smart Price</span></h1>
-                                        <p class="slide-description">Get the latest iPhone technology at an unbeatable price. Every device is thoroughly tested and comes with warranty.</p>
+                                        <h1 class="slide-title text-white">iPhone 15 Pro<br><span
+                                                class="gradient-text">Premium Quality, Smart Price</span></h1>
+                                        <p class="slide-description">Get the latest iPhone technology at an unbeatable
+                                            price. Every device is thoroughly tested and comes with warranty.</p>
                                         <div class="slide-features">
                                             <div class="feature-item">
                                                 <i class="bi bi-check-circle-fill"></i>
@@ -219,7 +232,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="slide-image">
-                                        <img src="https://images.unsplash.com/photo-1592286927505-2fd0c4a0d3ed?w=800&q=80" alt="iPhone" class="floating-image">
+                                        <img src="https://images.unsplash.com/photo-1592286927505-2fd0c4a0d3ed?w=800&q=80"
+                                            alt="iPhone" class="floating-image">
                                         <div class="image-badge badge-1">
                                             <i class="bi bi-shield-check"></i>
                                             <span>Certified</span>
@@ -243,8 +257,10 @@
                                 <div class="col-lg-6">
                                     <div class="slide-content">
                                         <span class="slide-badge">Hot Deal</span>
-                                        <h1 class="slide-title text-white">Samsung Galaxy S24<br><span class="gradient-green-text">Flagship Features, Affordable Price</span></h1>
-                                        <p class="slide-description">Experience cutting-edge Android technology at a fraction of the cost. Thoroughly tested and certified.</p>
+                                        <h1 class="slide-title text-white"><span class="gradient-green-text">Flagship
+                                                Features, Affordable Price</span></h1>
+                                        <p class="slide-description">Experience cutting-edge Android technology at a
+                                            fraction of the cost. Thoroughly tested and certified.</p>
                                         <div class="slide-features">
                                             <div class="feature-item">
                                                 <i class="bi bi-check-circle-fill"></i>
@@ -276,7 +292,8 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="slide-image">
-                                        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&q=80" alt="Samsung Galaxy" class="floating-image">
+                                        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&q=80"
+                                            alt="Samsung Galaxy" class="floating-image">
                                         <div class="image-badge badge-1">
                                             <i class="bi bi-shield-check"></i>
                                             <span>Certified</span>
@@ -301,8 +318,8 @@
             </button>
         </div>
     </section>
-    
-    <!-- Trust Badges - FULL WIDTH -->
+
+    <!-- 5. Trust Badges Section -->
     <div class="trust-badges">
         <div class="container-fluid px-5">
             <div class="row text-center g-4">
@@ -327,321 +344,93 @@
             </div>
         </div>
     </div>
-    
-    <!-- What is Renewed Section -->
-    <div class="container-fluid px-5 my-4">
-        <div class="text-center">
-            <i class="fas fa-info-circle text-muted"></i>
-            <a href="#" class="ms-2 text-decoration-none fw-semibold">What is Renewed from RefurBazaar?</a>
-        </div>
-    </div>
-    
-    <!-- Verified Devices Section - FULL WIDTH -->
-    <section class="verified-section py-5">
+
+    <!-- Reordered sections: Moving Shop by Category before What is Renewed -->
+
+    <!-- 6. Shop by Category (Featured Categories) -->
+    <section class="featured-categories py-5 bg-light">
         <div class="container-fluid px-5">
-            <h2 class="text-center mb-5 fw-bold fs-1">ALL OUR DEVICES ARE ORIGINAL AND VERIFIED BY EXPERTS</h2>
-            
-            <div class="row align-items-center g-5">
-                <div class="col-lg-3">
-                    <div class="feature-box text-center mb-5">
-                        <div class="feature-icon mb-3">
-                            <i class="far fa-smile-beam fa-4x text-primary"></i>
+            <h2 class="fw-bold mb-4">SHOP BY CATEGORY</h2>
+
+            <div class="row g-3">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon mb-3">
+                            <i class="bi bi-phone fs-1 text-primary"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">Risk Free</h5>
-                        <p class="text-muted">10 days to return in case of any issue</p>
-                    </div>
-                    
-                    <div class="feature-box text-center">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-check-double fa-4x text-primary"></i>
-                        </div>
-                        <h5 class="fw-bold mb-3">Verified Devices- One by One</h5>
-                        <p class="text-muted">50 points quality check on all aspects of the device (screen, battery, speed, durability,...)</p>
+                        <h6 class="fw-semibold">iPhones</h6>
+                        <small class="text-muted">450+ Products</small>
                     </div>
                 </div>
 
-                <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                    <img src="image.png" alt="Verified Devices" class="img-fluid rounded">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon mb-3">
+                            <i class="bi bi-laptop fs-1 text-success"></i>
+                        </div>
+                        <h6 class="fw-semibold">MacBooks</h6>
+                        <small class="text-muted">320+ Products</small>
+                    </div>
                 </div>
 
-                <div class="col-lg-3">
-                    <div class="feature-box text-center mb-5">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-star fa-4x text-primary"></i>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon mb-3">
+                            <i class="bi bi-phone-landscape fs-1 text-danger"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">Only from the best</h5>
-                        <p class="text-muted">Rigorous screening process - Only 1 out of 4 suppliers is accepted on RefurBazaar.</p>
+                        <h6 class="fw-semibold">Samsung</h6>
+                        <small class="text-muted">280+ Products</small>
                     </div>
-                    
-                    <div class="feature-box text-center">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-headset fa-4x text-primary"></i>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon mb-3">
+                            <i class="bi bi-laptop fs-1 text-warning"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">Always here for you</h5>
-                        <p class="text-muted">Proactive customer service to answer and solve any concern</p>
+                        <h6 class="fw-semibold">Laptops</h6>
+                        <small class="text-muted">215+ Products</small>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon mb-3">
+                            <i class="bi bi-tablet fs-1 text-info"></i>
+                        </div>
+                        <h6 class="fw-semibold">iPads</h6>
+                        <small class="text-muted">180+ Products</small>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon mb-3">
+                            <i class="bi bi-headphones fs-1 text-secondary"></i>
+                        </div>
+                        <h6 class="fw-semibold">Accessories</h6>
+                        <small class="text-muted">520+ Products</small>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Recommended for You Section -->
-    <!-- Adding new RECOMMENDED FOR YOU section with carousel -->
-    <section class="products-section py-5">
-        <div class="container-fluid px-5">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="fw-bold mb-0">RECOMMENDED FOR YOU</h2>
-                <a href="#" class="btn btn-outline-dark rounded-pill px-4">See all</a>
-            </div>
-            
-            <div class="position-relative carousel-wrapper">
-                <!-- Previous Button -->
-                <button class="carousel-control-prev-custom" type="button" data-bs-target="#recommendedCarousel" data-bs-slide="prev">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                
-                <div id="recommendedCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
-                    <div class="carousel-inner">
-                        <!-- Slide 1 - Products 1-5 -->
-                        <div class="carousel-item active">
-                            <div class="row g-4">
-                                <!-- Product 1: iPhone Case -->
-                                <div class="col">
-                                    <div class="product-card">
-                                        <div class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                        <img src="case-20iphone-2012-20pro-20black.jpeg" alt="Case iPhone 12 Pro Black" class="product-img">
-                                        <h5 class="product-title">Case iPhone 12 Pro Black</h5>
-                                        <!-- Added storage/RAM specs (N/A for accessories) and INR pricing with strikethrough -->
-                                        <p class="product-specs">Accessory</p>
-                                        <div class="product-pricing">
-                                            <span class="price-original">₹999</span>
-                                            <span class="product-price">₹649</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Product 2: iPhone 12 Pro -->
-                                <div class="col">
-                                    <div class="product-card">
-                                        <!-- Removed discount badge -->
-                                        <div class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                        <img src="iphone-2012-20pro.png" alt="iPhone 12 Pro" class="product-img">
-                                        <h5 class="product-title">iPhone 12 Pro</h5>
-                                        <div class="color-options mb-2">
-                                            <span class="color-dot" style="background: #5a5a5a;"></span>
-                                            <span class="color-dot" style="background: #4a7c9d;"></span>
-                                            <span class="color-dot" style="background: #f9d8c8;"></span>
-                                            <span class="color-dot" style="background: #c4c4c4;"></span>
-                                        </div>
-                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
-                                        <p class="product-specs">128GB | 6GB RAM</p>
-                                        <div class="product-pricing">
-                                            <span class="price-original">₹1,49,900</span>
-                                            <span class="product-price">₹90,399</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Product 3: Screen Protector -->
-                                <div class="col">
-                                    <div class="product-card">
-                                        <div class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                        <img src="screen-20protector-20for-20iphone-2012-20-2012-20pro.jpeg" alt="Screen Protector for iPhone 12 | 12 Pro" class="product-img">
-                                        <h5 class="product-title">Screen Protector for iPhone 12 | 12 Pro</h5>
-                                        <!-- Added storage/RAM specs (N/A for accessories) and INR pricing with strikethrough -->
-                                        <p class="product-specs">Accessory</p>
-                                        <div class="product-pricing">
-                                            <span class="price-original">₹999</span>
-                                            <span class="product-price">₹649</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Product 4: iPhone Case Black -->
-                                <div class="col">
-                                    <div class="product-card">
-                                        <div class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                        <img src="case-20iphone-2012-20pro-20black.jpeg" alt="Case iPhone 12 Black" class="product-img">
-                                        <h5 class="product-title">Case iPhone 12 Black</h5>
-                                        <!-- Added storage/RAM specs (N/A for accessories) and INR pricing with strikethrough -->
-                                        <p class="product-specs">Accessory</p>
-                                        <div class="product-pricing">
-                                            <span class="price-original">₹999</span>
-                                            <span class="product-price">₹649</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                
-                                <!-- Product 6: iPad -->
-                                <div class="col">
-                                    <div class="product-card">
-                                        <div class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                        <img src="ipad-207th-20gen-202019-20wi-fi.png" alt="iPad 7th Gen" class="product-img">
-                                        <h5 class="product-title">iPad 7th Gen 2019 Wi-Fi</h5>
-                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
-                                        <p class="product-specs">32GB | 2GB RAM</p>
-                                        <div class="product-pricing">
-                                            <span class="price-original">₹1,19,900</span>
-                                            <span class="product-price">₹73,899</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 2 - Products 6-10 -->
-                        <div class="carousel-item">
-                            <div class="row g-4">
-                                
-                                <!-- Product 5: Lenovo ThinkPad -->
-                                <div class="col">
-                                    <div class="product-card">
-                                        <!-- Removed discount badge -->
-                                        <div class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&h=400&fit=crop" alt="Lenovo ThinkPad-P50 Xeon 6th-Gen" class="product-img">
-                                        <h5 class="product-title">Lenovo ThinkPad-P50 Xeon 6th-Gen</h5>
-                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
-                                        <p class="product-specs">512GB SSD | 16GB RAM</p>
-                                        <div class="product-pricing">
-                                            <span class="price-original">₹2,49,900</span>
-                                            <span class="product-price">₹1,45,399</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Product 7: iPhone 12 -->
-                                <div class="col">
-                                    <div class="product-card">
-                                        <!-- Removed discount badge -->
-                                        <div class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                        <img src="iphone-2012.png" alt="iPhone 12" class="product-img">
-                                        <h5 class="product-title">iPhone 12</h5>
-                                        <div class="color-options mb-2">
-                                            <span class="color-dot" style="background: #fff; border: 1px solid #ddd;"></span>
-                                            <span class="color-dot" style="background: #1f1f1f;"></span>
-                                            <span class="color-dot" style="background: #f9d8c8;"></span>
-                                        </div>
-                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
-                                        <p class="product-specs">64GB | 4GB RAM</p>
-                                        <div class="product-pricing">
-                                            <span class="price-original">₹1,09,900</span>
-                                            <span class="product-price">₹70,599</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Product 8: iPhone 14 -->
-                                <div class="col">
-                                    <div class="product-card">
-                                        <!-- Removed discount badge -->
-                                        <div class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                        <img src="iphone-2014.png" alt="iPhone 14" class="product-img">
-                                        <h5 class="product-title">iPhone 14</h5>
-                                        <div class="color-options mb-2">
-                                            <span class="color-dot" style="background: #a8c5d8;"></span>
-                                            <span class="color-dot" style="background: #1f1f1f;"></span>
-                                            <span class="color-dot" style="background: #fff; border: 1px solid #ddd;"></span>
-                                        </div>
-                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
-                                        <p class="product-specs">128GB | 6GB RAM</p>
-                                        <div class="product-pricing">
-                                            <span class="price-original">₹1,79,900</span>
-                                            <span class="product-price">₹1,06,799</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Product 9: iPhone 12 Pro Max -->
-                                <div class="col">
-                                    <div class="product-card">
-                                        <!-- Removed discount badge -->
-                                        <div class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                        <img src="iphone-2012-20pro-20max.png" alt="iPhone 12 Pro Max" class="product-img">
-                                        <h5 class="product-title">iPhone 12 Pro Max</h5>
-                                        <div class="color-options mb-2">
-                                            <span class="color-dot" style="background: #5a5a5a;"></span>
-                                            <span class="color-dot" style="background: #c4c4c4;"></span>
-                                            <span class="color-dot" style="background: #f9d8c8;"></span>
-                                        </div>
-                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
-                                        <p class="product-specs">256GB | 6GB RAM</p>
-                                        <div class="product-pricing">
-                                            <span class="price-original">₹1,69,900</span>
-                                            <span class="product-price">₹1,05,099</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Product 10: iPhone 11 Pro -->
-                                <div class="col">
-                                    <div class="product-card">
-                                        <!-- Removed discount badge -->
-                                        <div class="wishlist-btn">
-                                            <i class="far fa-heart"></i>
-                                        </div>
-                                        <img src="iphone-2011-20pro.png" alt="iPhone 11 Pro" class="product-img">
-                                        <h5 class="product-title">iPhone 11 Pro</h5>
-                                        <div class="color-options mb-2">
-                                            <span class="color-dot" style="background: #1f1f1f;"></span>
-                                            <span class="color-dot" style="background: #c4c4c4;"></span>
-                                            <span class="color-dot" style="background: #a4c4a4;"></span>
-                                        </div>
-                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
-                                        <p class="product-specs">64GB | 4GB RAM</p>
-                                        <div class="product-pricing">
-                                            <span class="price-original">₹1,49,900</span>
-                                            <span class="product-price">₹77,999</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Next Button -->
-                <button class="carousel-control-next-custom" type="button" data-bs-target="#recommendedCarousel" data-bs-slide="next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
 
-    <!-- End of Year Sale Section -->
-    <!-- Adding END OF YEAR SALE section with carousel and actual product images -->
+    <!-- 7. End of Year Sale Section -->
     <section class="products-section py-5 bg-light">
         <div class="container-fluid px-5">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="fw-bold mb-0">END OF YEAR SALE 🔥</h2>
                 <a href="#" class="btn btn-outline-dark rounded-pill px-4">See all</a>
             </div>
-            
+
             <div class="position-relative carousel-wrapper">
                 <!-- Previous Button -->
-                <button class="carousel-control-prev-custom" type="button" data-bs-target="#endOfYearCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev-custom" type="button" data-bs-target="#endOfYearCarousel"
+                    data-bs-slide="prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                
+
                 <div id="endOfYearCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
                     <div class="carousel-inner">
                         <!-- Slide 1 - Products 1-5 -->
@@ -674,7 +463,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Replaced Product 2 with iPhone 11 using actual image -->
                                 <div class="col">
                                     <div class="product-card">
@@ -686,7 +475,8 @@
                                         <h5 class="product-title">iPhone 11</h5>
                                         <div class="color-options mb-2">
                                             <span class="color-dot" style="background: #1f1f1f;"></span>
-                                            <span class="color-dot" style="background: #fff; border: 1px solid #ddd;"></span>
+                                            <span class="color-dot"
+                                                style="background: #fff; border: 1px solid #ddd;"></span>
                                             <span class="color-dot" style="background: #a4c4a4;"></span>
                                             <span class="color-dot" style="background: #c4b5f4;"></span>
                                             <span class="more-colors">+2</span>
@@ -699,7 +489,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Replaced Product 3 with Dell Latitude using actual image -->
                                 <div class="col">
                                     <div class="product-card">
@@ -707,7 +497,8 @@
                                         <div class="wishlist-btn">
                                             <i class="far fa-heart"></i>
                                         </div>
-                                        <img src="Dell Latitude 7400 Core-i7 8th-Gen.jpg" alt="Dell Latitude 7400" class="product-img">
+                                        <img src="Dell Latitude 7400 Core-i7 8th-Gen.jpg" alt="Dell Latitude 7400"
+                                            class="product-img">
                                         <h5 class="product-title">Dell Latitude 7400 Core-i7 8th-Gen</h5>
                                         <!-- Added storage/RAM specs and INR pricing with strikethrough -->
                                         <p class="product-specs">256GB SSD | 8GB RAM</p>
@@ -717,7 +508,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Replaced Product 4 with iPhone 14 Pro Max using actual image -->
                                 <div class="col">
                                     <div class="product-card">
@@ -741,7 +532,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Replaced Product 5 with iPhone SE 2022 using actual image -->
                                 <div class="col">
                                     <div class="product-card">
@@ -754,7 +545,8 @@
                                         <div class="color-options mb-2">
                                             <span class="color-dot" style="background: #1f1f1f;"></span>
                                             <span class="color-dot" style="background: #d42f3e;"></span>
-                                            <span class="color-dot" style="background: #fff; border: 1px solid #ddd;"></span>
+                                            <span class="color-dot"
+                                                style="background: #fff; border: 1px solid #ddd;"></span>
                                         </div>
                                         <!-- Added storage/RAM specs and INR pricing with strikethrough -->
                                         <p class="product-specs">64GB | 4GB RAM</p>
@@ -766,7 +558,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Slide 2 - Products 6-10 -->
                         <div class="carousel-item">
                             <div class="row g-4">
@@ -781,7 +573,8 @@
                                         <h5 class="product-title">iPhone 12 Mini</h5>
                                         <div class="color-options mb-2">
                                             <span class="color-dot" style="background: #1f1f1f;"></span>
-                                            <span class="color-dot" style="background: #fff; border: 1px solid #ddd;"></span>
+                                            <span class="color-dot"
+                                                style="background: #fff; border: 1px solid #ddd;"></span>
                                             <span class="color-dot" style="background: #4a7c9d;"></span>
                                             <span class="more-colors">+2</span>
                                         </div>
@@ -793,7 +586,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Replaced Product 7 with iPhone 13 Pro using actual image -->
                                 <div class="col">
                                     <div class="product-card">
@@ -820,7 +613,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Replaced Product 8 with Galaxy S22 Ultra using actual image -->
                                 <div class="col">
                                     <div class="product-card">
@@ -832,7 +625,8 @@
                                         <h5 class="product-title">Galaxy S22 Ultra</h5>
                                         <div class="color-options mb-2">
                                             <span class="color-dot" style="background: #1f1f1f;"></span>
-                                            <span class="color-dot" style="background: #fff; border: 1px solid #ddd;"></span>
+                                            <span class="color-dot"
+                                                style="background: #fff; border: 1px solid #ddd;"></span>
                                             <span class="color-dot" style="background: #5e2e8e;"></span>
                                         </div>
                                         <!-- Added storage/RAM specs and INR pricing with strikethrough -->
@@ -843,7 +637,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Replaced Product 9 with MacBook Air 2020 using actual image -->
                                 <div class="col">
                                     <div class="product-card">
@@ -861,7 +655,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Replaced Product 10 with iPad 8th Gen using actual image -->
                                 <div class="col">
                                     <div class="product-card">
@@ -890,83 +684,275 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Next Button -->
-                <button class="carousel-control-next-custom" type="button" data-bs-target="#endOfYearCarousel" data-bs-slide="next">
+                <button class="carousel-control-next-custom" type="button" data-bs-target="#endOfYearCarousel"
+                    data-bs-slide="next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
         </div>
     </section>
-    
-    <!-- SHOP CERTIFIED RENEWED Section -->
-    <section class="categories-section py-5 bg-light">
+
+    <!-- 8. Recommended for You Section -->
+    <section class="products-section py-5">
         <div class="container-fluid px-5">
-            <h2 class="fw-bold mb-4">SHOP CERTIFIED RENEWED</h2>
-            
-            <div class="row g-4">
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="category-card text-center">
-                        <div class="category-icon mb-3">
-                            <i class="fas fa-fire fa-4x text-danger"></i>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold mb-0">RECOMMENDED FOR YOU</h2>
+                <a href="#" class="btn btn-outline-dark rounded-pill px-4">See all</a>
+            </div>
+
+            <div class="position-relative carousel-wrapper">
+                <!-- Previous Button -->
+                <button class="carousel-control-prev-custom" type="button" data-bs-target="#recommendedCarousel"
+                    data-bs-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div id="recommendedCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 - Products 1-5 -->
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <!-- Product 1: iPhone Case -->
+                                <div class="col">
+                                    <div class="product-card">
+                                        <div class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <img src="case-20iphone-2012-20pro-20black.jpeg" alt="Case iPhone 12 Pro Black"
+                                            class="product-img">
+                                        <h5 class="product-title">Case iPhone 12 Pro Black</h5>
+                                        <!-- Added storage/RAM specs (N/A for accessories) and INR pricing with strikethrough -->
+                                        <p class="product-specs">Accessory</p>
+                                        <div class="product-pricing">
+                                            <span class="price-original">₹999</span>
+                                            <span class="product-price">₹649</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 2: iPhone 12 Pro -->
+                                <div class="col">
+                                    <div class="product-card">
+                                        <!-- Removed discount badge -->
+                                        <div class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <img src="iphone-2012-20pro.png" alt="iPhone 12 Pro" class="product-img">
+                                        <h5 class="product-title">iPhone 12 Pro</h5>
+                                        <div class="color-options mb-2">
+                                            <span class="color-dot" style="background: #5a5a5a;"></span>
+                                            <span class="color-dot" style="background: #4a7c9d;"></span>
+                                            <span class="color-dot" style="background: #f9d8c8;"></span>
+                                            <span class="color-dot" style="background: #c4c4c4;"></span>
+                                        </div>
+                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
+                                        <p class="product-specs">128GB | 6GB RAM</p>
+                                        <div class="product-pricing">
+                                            <span class="price-original">₹1,49,900</span>
+                                            <span class="product-price">₹90,399</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 3: Screen Protector -->
+                                <div class="col">
+                                    <div class="product-card">
+                                        <div class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <img src="screen-20protector-20for-20iphone-2012-20-2012-20pro.jpeg"
+                                            alt="Screen Protector for iPhone 12 | 12 Pro" class="product-img">
+                                        <h5 class="product-title">Screen Protector for iPhone 12 | 12 Pro</h5>
+                                        <!-- Added storage/RAM specs (N/A for accessories) and INR pricing with strikethrough -->
+                                        <p class="product-specs">Accessory</p>
+                                        <div class="product-pricing">
+                                            <span class="price-original">₹999</span>
+                                            <span class="product-price">₹649</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 4: iPhone Case Black -->
+                                <div class="col">
+                                    <div class="product-card">
+                                        <div class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <img src="case-20iphone-2012-20pro-20black.jpeg" alt="Case iPhone 12 Black"
+                                            class="product-img">
+                                        <h5 class="product-title">Case iPhone 12 Black</h5>
+                                        <!-- Added storage/RAM specs (N/A for accessories) and INR pricing with strikethrough -->
+                                        <p class="product-specs">Accessory</p>
+                                        <div class="product-pricing">
+                                            <span class="price-original">₹999</span>
+                                            <span class="product-price">₹649</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 6: iPad -->
+                                <div class="col">
+                                    <div class="product-card">
+                                        <div class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <img src="ipad-207th-20gen-202019-20wi-fi.png" alt="iPad 7th Gen"
+                                            class="product-img">
+                                        <h5 class="product-title">iPad 7th Gen 2019 Wi-Fi</h5>
+                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
+                                        <p class="product-specs">32GB | 2GB RAM</p>
+                                        <div class="product-pricing">
+                                            <span class="price-original">₹1,19,900</span>
+                                            <span class="product-price">₹73,899</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
                         </div>
-                        <h6 class="fw-semibold">End of Year Sale</h6>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="category-card text-center">
-                        <img src="iPhone 14 Pro Max.png" alt="iPhone" class="category-img mb-3 rounded">
-                        <h6 class="fw-semibold">iPhone</h6>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="category-card text-center">
-                        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=200&h=200&fit=crop" alt="Samsung" class="category-img mb-3 rounded">
-                        <h6 class="fw-semibold">Samsung</h6>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="category-card text-center">
-                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=200&h=200&fit=crop" alt="MacBooks" class="category-img mb-3 rounded">
-                        <h6 class="fw-semibold">MacBooks</h6>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="category-card text-center">
-                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=200&h=200&fit=crop" alt="Laptops" class="category-img mb-3 rounded">
-                        <h6 class="fw-semibold">Laptops</h6>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="category-card text-center">
-                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=200&h=200&fit=crop" alt="iPads" class="category-img mb-3 rounded">
-                        <h6 class="fw-semibold">iPads</h6>
+
+                        <!-- Slide 2 - Products 6-10 -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+
+                                <!-- Product 5: Lenovo ThinkPad -->
+                                <div class="col">
+                                    <div class="product-card">
+                                        <!-- Removed discount badge -->
+                                        <div class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&h=400&fit=crop"
+                                            alt="Lenovo ThinkPad-P50 Xeon 6th-Gen" class="product-img">
+                                        <h5 class="product-title">Lenovo ThinkPad-P50 Xeon 6th-Gen</h5>
+                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
+                                        <p class="product-specs">512GB SSD | 16GB RAM</p>
+                                        <div class="product-pricing">
+                                            <span class="price-original">₹2,49,900</span>
+                                            <span class="product-price">₹1,45,399</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 7: iPhone 12 -->
+                                <div class="col">
+                                    <div class="product-card">
+                                        <!-- Removed discount badge -->
+                                        <div class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <img src="iphone-2012.png" alt="iPhone 12" class="product-img">
+                                        <h5 class="product-title">iPhone 12</h5>
+                                        <div class="color-options mb-2">
+                                            <span class="color-dot"
+                                                style="background: #fff; border: 1px solid #ddd;"></span>
+                                            <span class="color-dot" style="background: #1f1f1f;"></span>
+                                            <span class="color-dot" style="background: #f9d8c8;"></span>
+                                        </div>
+                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
+                                        <p class="product-specs">64GB | 4GB RAM</p>
+                                        <div class="product-pricing">
+                                            <span class="price-original">₹1,09,900</span>
+                                            <span class="product-price">₹70,599</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 8: iPhone 14 -->
+                                <div class="col">
+                                    <div class="product-card">
+                                        <!-- Removed discount badge -->
+                                        <div class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <img src="iphone-2014.png" alt="iPhone 14" class="product-img">
+                                        <h5 class="product-title">iPhone 14</h5>
+                                        <div class="color-options mb-2">
+                                            <span class="color-dot" style="background: #a8c5d8;"></span>
+                                            <span class="color-dot" style="background: #1f1f1f;"></span>
+                                            <span class="color-dot"
+                                                style="background: #fff; border: 1px solid #ddd;"></span>
+                                        </div>
+                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
+                                        <p class="product-specs">128GB | 6GB RAM</p>
+                                        <div class="product-pricing">
+                                            <span class="price-original">₹1,79,900</span>
+                                            <span class="product-price">₹1,06,799</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 9: iPhone 12 Pro Max -->
+                                <div class="col">
+                                    <div class="product-card">
+                                        <!-- Removed discount badge -->
+                                        <div class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <img src="iphone-2012-20pro-20max.png" alt="iPhone 12 Pro Max"
+                                            class="product-img">
+                                        <h5 class="product-title">iPhone 12 Pro Max</h5>
+                                        <div class="color-options mb-2">
+                                            <span class="color-dot" style="background: #5a5a5a;"></span>
+                                            <span class="color-dot" style="background: #c4c4c4;"></span>
+                                            <span class="color-dot" style="background: #f9d8c8;"></span>
+                                        </div>
+                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
+                                        <p class="product-specs">256GB | 6GB RAM</p>
+                                        <div class="product-pricing">
+                                            <span class="price-original">₹1,69,900</span>
+                                            <span class="product-price">₹1,05,099</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 10: iPhone 11 Pro -->
+                                <div class="col">
+                                    <div class="product-card">
+                                        <!-- Removed discount badge -->
+                                        <div class="wishlist-btn">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <img src="iphone-2011-20pro.png" alt="iPhone 11 Pro" class="product-img">
+                                        <h5 class="product-title">iPhone 11 Pro</h5>
+                                        <div class="color-options mb-2">
+                                            <span class="color-dot" style="background: #1f1f1f;"></span>
+                                            <span class="color-dot" style="background: #c4c4c4;"></span>
+                                            <span class="color-dot" style="background: #a4c4a4;"></span>
+                                        </div>
+                                        <!-- Added storage/RAM specs and INR pricing with strikethrough -->
+                                        <p class="product-specs">64GB | 4GB RAM</p>
+                                        <div class="product-pricing">
+                                            <span class="price-original">₹1,49,900</span>
+                                            <span class="product-price">₹77,999</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- <div class="col-lg-2 col-md-4 col-6">
-                    <div class="category-card text-center">
-                        <img src="https://images.unsplash.com/photo-1579586337278-3bef040fd17a?w=200&h=200&fit=crop" alt="Apple Watches" class="category-img mb-3 rounded">
-                        <h6 class="fw-semibold">Apple Watches</h6>
-                    </div>
-                </div> -->
+                <!-- Next Button -->
+                <button class="carousel-control-next-custom" type="button" data-bs-target="#recommendedCarousel"
+                    data-bs-slide="next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
-    
-    <!-- RefurBazaar Express Section - FULL WIDTH -->
+
+    <!-- 9. RefurBazaar Express Section -->
     <section class="express-section py-5">
         <div class="container-fluid px-5">
             <div class="d-flex align-items-center mb-4">
                 <h2 class="fw-bold mb-0">REFURBAZAAR EXPRESS</h2>
                 <i class="fas fa-info-circle ms-2 text-muted"></i>
             </div>
-            
+
             <div class="row g-4">
                 <div class="col-lg-9">
                     <div class="row g-4">
@@ -976,7 +962,8 @@
                                 <div class="wishlist-btn">
                                     <i class="far fa-heart"></i>
                                 </div>
-                                <img src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?w=400" alt="iPhone 12 Pro" class="product-img">
+                                <img src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?w=400"
+                                    alt="iPhone 12 Pro" class="product-img">
                                 <h5 class="product-title">iPhone 12 Pro</h5>
                                 <div class="color-options mb-2">
                                     <span class="color-dot" style="background: #4a7c9d;"></span>
@@ -990,13 +977,14 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="product-card">
                                 <div class="wishlist-btn">
                                     <i class="far fa-heart"></i>
                                 </div>
-                                <img src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?w=400" alt="iPhone 12 Pro" class="product-img">
+                                <img src="https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?w=400"
+                                    alt="iPhone 12 Pro" class="product-img">
                                 <h5 class="product-title">iPhone 12 Pro</h5>
                                 <div class="color-options mb-2">
                                     <span class="color-dot" style="background: #5a5a5a;"></span>
@@ -1010,13 +998,14 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="product-card">
                                 <div class="wishlist-btn">
                                     <i class="far fa-heart"></i>
                                 </div>
-                                <img src="https://images.unsplash.com/photo-1632661674361-536a86d2432c?w=400" alt="iPhone 13 Pro Max" class="product-img">
+                                <img src="https://images.unsplash.com/photo-1632661674361-536a86d2432c?w=400"
+                                    alt="iPhone 13 Pro Max" class="product-img">
                                 <h5 class="product-title">iPhone 13 Pro Max</h5>
                                 <div class="color-options mb-2">
                                     <span class="color-dot" style="background: #5a5a5a;"></span>
@@ -1032,7 +1021,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3">
                     <div class="express-promo h-100">
                         <div class="express-logo mb-4">
@@ -1046,12 +1035,12 @@
             </div>
         </div>
     </section>
-    
-    <!-- Hot Deals Section - FULL WIDTH -->
+
+    <!-- 10. Hot Deals Section -->
     <section class="hot-deals-section py-5">
         <div class="container-fluid px-5">
             <h2 class="fw-bold mb-4">HOT DEALS</h2>
-            
+
             <ul class="nav nav-pills mb-4 flex-wrap gap-2" id="hotDealsTabs">
                 <li class="nav-item">
                     <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#iphones-tab">
@@ -1073,12 +1062,13 @@
                 </li>
                 <li class="nav-item">
                     <button class="nav-link" data-bs-toggle="pill" data-bs-target="#laptops-tab">
-                        <img src="Dell Latitude 7420 Core i7 - 11th Gen.png" alt="Laptops" class="category-thumb rounded">
+                        <img src="Dell Latitude 7420 Core i7 - 11th Gen.png" alt="Laptops"
+                            class="category-thumb rounded">
                         <span class="ms-2">Laptops</span>
                     </button>
                 </li>
             </ul>
-            
+
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="iphones-tab">
                     <div class="">
@@ -1107,7 +1097,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="product-badge">
@@ -1132,7 +1122,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
@@ -1153,7 +1143,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="product-badge">
@@ -1177,7 +1167,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="product-badge">
@@ -1191,7 +1181,8 @@
                                     <div class="color-options mb-2">
                                         <span class="color-dot" style="background: #1f1f1f;"></span>
                                         <span class="color-dot" style="background: #c4b5f4;"></span>
-                                        <span class="color-dot" style="background: #fff; border: 1px solid #ddd;"></span>
+                                        <span class="color-dot"
+                                            style="background: #fff; border: 1px solid #ddd;"></span>
                                         <span class="color-dot" style="background: #d42f3e;"></span>
                                         <span class="more-colors">+2</span>
                                     </div>
@@ -1205,7 +1196,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="tab-pane fade" id="macbooks-tab">
                     <!-- Added MacBooks products with actual images -->
                     <div class="">
@@ -1225,7 +1216,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
@@ -1240,7 +1231,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
@@ -1255,7 +1246,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
@@ -1270,7 +1261,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
@@ -1285,11 +1276,11 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="tab-pane fade" id="samsung-tab">
                     <!-- Added Samsung products with actual images -->
                     <div class="">
@@ -1304,7 +1295,8 @@
                                     <h5 class="product-title">Galaxy S22 Ultra</h5>
                                     <div class="color-options mb-2">
                                         <span class="color-dot" style="background: #1f1f1f;"></span>
-                                        <span class="color-dot" style="background: #fff; border: 1px solid #ddd;"></span>
+                                        <span class="color-dot"
+                                            style="background: #fff; border: 1px solid #ddd;"></span>
                                         <span class="color-dot" style="background: #5e2e8e;"></span>
                                     </div>
                                     <p class="product-specs">256GB | 8GB RAM</p>
@@ -1314,7 +1306,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
@@ -1333,7 +1325,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
@@ -1352,7 +1344,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
@@ -1371,7 +1363,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
@@ -1394,7 +1386,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="tab-pane fade" id="laptops-tab">
                     <!-- Added Laptops products with actual images -->
                     <div class="">
@@ -1405,7 +1397,8 @@
                                     <div class="wishlist-btn">
                                         <i class="far fa-heart"></i>
                                     </div>
-                                    <img src="Dell Latitude 7420 Core i7 - 11th Gen.png" alt="Dell Latitude 7420" class="product-img">
+                                    <img src="Dell Latitude 7420 Core i7 - 11th Gen.png" alt="Dell Latitude 7420"
+                                        class="product-img">
                                     <h5 class="product-title">Dell Latitude 7420 Core i7 - 11th Gen</h5>
                                     <p class="product-specs">512GB SSD | 16GB RAM | 14" Intel</p>
                                     <div class="product-pricing">
@@ -1414,13 +1407,14 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
                                         <i class="far fa-heart"></i>
                                     </div>
-                                    <img src="Dell Latitude 7400 Core-i7 8th-Gen.jpg" alt="Dell Latitude 7400" class="product-img">
+                                    <img src="Dell Latitude 7400 Core-i7 8th-Gen.jpg" alt="Dell Latitude 7400"
+                                        class="product-img">
                                     <h5 class="product-title">Dell Latitude 7400 Core-i7 8th-Gen</h5>
                                     <p class="product-specs">512GB SSD | 16GB RAM | 14" Intel</p>
                                     <div class="product-pricing">
@@ -1429,13 +1423,14 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
                                         <i class="far fa-heart"></i>
                                     </div>
-                                    <img src="Lenovo ThinkPad-P50 Xeon 6th-Gen.jpg" alt="Lenovo ThinkPad P50" class="product-img">
+                                    <img src="Lenovo ThinkPad-P50 Xeon 6th-Gen.jpg" alt="Lenovo ThinkPad P50"
+                                        class="product-img">
                                     <h5 class="product-title">Lenovo ThinkPad-P50 Xeon 6th-Gen</h5>
                                     <p class="product-specs">512GB SSD | 16GB RAM | 15" Intel</p>
                                     <div class="product-pricing">
@@ -1444,13 +1439,14 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl col-lg col-md-6 col-sm-6">
                                 <div class="product-card">
                                     <div class="wishlist-btn">
                                         <i class="far fa-heart"></i>
                                     </div>
-                                    <img src="HP Elitebook 640 G4 Core-i5 8th Gen.jpg" alt="HP Elitebook 640 G4" class="product-img">
+                                    <img src="HP Elitebook 640 G4 Core-i5 8th Gen.jpg" alt="HP Elitebook 640 G4"
+                                        class="product-img">
                                     <h5 class="product-title">HP Elitebook 640 G4 Core-i5 8th Gen</h5>
                                     <p class="product-specs">256GB SSD | 8GB RAM | 14" Intel</p>
                                     <div class="product-pricing">
@@ -1465,7 +1461,8 @@
                                     <div class="wishlist-btn">
                                         <i class="far fa-heart"></i>
                                     </div>
-                                    <img src="Dell Latitude 7400 Core-i7 8th-Gen.jpg" alt="Dell Latitude 7400" class="product-img">
+                                    <img src="Dell Latitude 7400 Core-i7 8th-Gen.jpg" alt="Dell Latitude 7400"
+                                        class="product-img">
                                     <h5 class="product-title">Dell Latitude 7400 Core-i7 8th-Gen</h5>
                                     <p class="product-specs">512GB SSD | 16GB RAM | 14" Intel</p>
                                     <div class="product-pricing">
@@ -1481,7 +1478,130 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- 11. What is Renewed Section -->
+    <div class="container-fluid px-5 my-4">
+        <div class="text-center">
+            <i class="fas fa-info-circle text-muted"></i>
+            <a href="#" class="ms-2 text-decoration-none fw-semibold">What is Renewed from RefurBazaar?</a>
+        </div>
+    </div>
+
+    <!-- 12. Verified Devices Section -->
+    <section class="verified-section py-5">
+        <div class="container-fluid px-5">
+            <h2 class="text-center mb-5 fw-bold fs-1">ALL OUR DEVICES ARE ORIGINAL AND VERIFIED BY EXPERTS</h2>
+
+            <div class="row align-items-center g-5">
+                <div class="col-lg-3">
+                    <div class="feature-box text-center mb-5">
+                        <div class="feature-icon mb-3">
+                            <i class="far fa-smile-beam fa-4x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Risk Free</h5>
+                        <p class="text-muted">10 days to return in case of any issue</p>
+                    </div>
+
+                    <div class="feature-box text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-check-double fa-4x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Verified Devices- One by One</h5>
+                        <p class="text-muted">50 points quality check on all aspects of the device (screen, battery,
+                            speed, durability,...)</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                    <img src="image.png" alt="Verified Devices" class="img-fluid rounded">
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="feature-box text-center mb-5">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-star fa-4x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Only from the best</h5>
+                        <p class="text-muted">Rigorous screening process - Only 1 out of 4 suppliers is accepted on
+                            RefurBazaar.</p>
+                    </div>
+
+                    <div class="feature-box text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-headset fa-4x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Always here for you</h5>
+                        <p class="text-muted">Proactive customer service to answer and solve any concern</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Shop Certified Renewed Section -->
+    <section class="categories-section py-5 bg-light">
+        <div class="container-fluid px-5">
+            <h2 class="fw-bold mb-4">SHOP CERTIFIED RENEWED</h2>
+
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-fire fa-4x text-danger"></i>
+                        </div>
+                        <h6 class="fw-semibold">End of Year Sale</h6>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <img src="iPhone 14 Pro Max.png" alt="iPhone" class="category-img mb-3 rounded">
+                        <h6 class="fw-semibold">iPhone</h6>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=200&h=200&fit=crop"
+                            alt="Samsung" class="category-img mb-3 rounded">
+                        <h6 class="fw-semibold">Samsung</h6>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=200&h=200&fit=crop"
+                            alt="MacBooks" class="category-img mb-3 rounded">
+                        <h6 class="fw-semibold">MacBooks</h6>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=200&h=200&fit=crop"
+                            alt="Laptops" class="category-img mb-3 rounded">
+                        <h6 class="fw-semibold">Laptops</h6>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=200&h=200&fit=crop"
+                            alt="iPads" class="category-img mb-3 rounded">
+                        <h6 class="fw-semibold">iPads</h6>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card text-center">
+                        <img src="https://images.unsplash.com/photo-1579586337278-3bef040fd17a?w=200&h=200&fit=crop" alt="Apple Watches" class="category-img mb-3 rounded">
+                        <h6 class="fw-semibold">Apple Watches</h6>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
     <!-- Certified Renewed iPhones -->
     <section class="certified-iphones-section py-5 bg-light">
         <div class="container-fluid px-5">
@@ -1489,7 +1609,7 @@
                 <h2 class="fw-bold mb-0">CERTIFIED RENEWED IPHONES</h2>
                 <a href="#" class="btn btn-outline-dark rounded-pill px-4">See all</a>
             </div>
-            
+
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="promo-card iphones-promo h-100 d-flex align-items-center justify-content-center">
@@ -1498,7 +1618,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-8">
                     <div class="row g-4">
                         <!-- Updated CERTIFIED RENEWED IPHONES products to match standard format -->
@@ -1525,7 +1645,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="product-card">
                                 <div class="product-badge">
@@ -1550,7 +1670,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="product-card">
                                 <div class="wishlist-btn">
@@ -1576,7 +1696,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Certified Renewed Samsung -->
     <section class="certified-samsung-section py-5">
         <div class="container-fluid px-5">
@@ -1584,7 +1704,7 @@
                 <h2 class="fw-bold mb-0">CERTIFIED RENEWED SAMSUNG</h2>
                 <a href="#" class="btn btn-outline-dark rounded-pill px-4">See all</a>
             </div>
-            
+
             <div class="row g-4">
                 <div class="col-lg-8">
                     <div class="row g-4">
@@ -1611,7 +1731,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="product-card">
                                 <div class="wishlist-btn">
@@ -1630,7 +1750,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="product-card">
                                 <div class="product-badge">
@@ -1654,7 +1774,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4">
                     <div class="promo-card samsung-promo h-100 d-flex align-items-center justify-content-center">
                         <div class="text-center">
@@ -1673,7 +1793,8 @@
                 <div class="col-lg-6">
                     <div class="care-visual">
                         <div class="care-device-mockup">
-                            <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=600&q=80" alt="iPhone Protected" class="device-image">
+                            <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=600&q=80"
+                                alt="iPhone Protected" class="device-image">
                             <div class="protection-overlay">
                                 <div class="protection-badge">
                                     <i class="bi bi-shield-fill-check"></i>
@@ -1692,7 +1813,9 @@
                     <div class="care-content">
                         <span class="section-badge">Guaranteed peace of mind</span>
                         <h2 class="section-title">Relax with RefurBazaar Care</h2>
-                        <p class="section-description">With RefurBazaar, you have total, unlimited, and free protection against accidental damage and malfunctions. If you wish, you can also add Theft Coverage. We're always by your side, to ensure peace of mind at all times.</p>
+                        <p class="section-description">With RefurBazaar, you have total, unlimited, and free protection
+                            against accidental damage and malfunctions. If you wish, you can also add Theft Coverage.
+                            We're always by your side, to ensure peace of mind at all times.</p>
 
                         <div class="care-features">
                             <div class="care-feature">
@@ -1753,7 +1876,8 @@
                     <i class="bi bi-globe"></i> Your Environmental Impact
                 </span>
                 <h2 class="section-title">See Your Real-Time Impact</h2>
-                <p class="section-description">Every purchase makes a difference. Track your contribution to a sustainable future.</p>
+                <p class="section-description">Every purchase makes a difference. Track your contribution to a
+                    sustainable future.</p>
             </div>
 
             <div class="impact-dashboard">
@@ -1829,12 +1953,15 @@
                     <div class="row align-items-center g-4">
                         <div class="col-md-6">
                             <h3 class="fw-bold mb-3">Join Our Green Community</h3>
-                            <p class="text-muted">Over 100,000+ customers are making a difference by choosing refurbished electronics. Together, we've prevented millions of kg of e-waste and reduced our carbon footprint significantly.</p>
+                            <p class="text-muted">Over 100,000+ customers are making a difference by choosing
+                                refurbished electronics. Together, we've prevented millions of kg of e-waste and reduced
+                                our carbon footprint significantly.</p>
                             <button class="btn btn-success">See Full Impact Report</button>
                         </div>
                         <div class="col-md-6">
                             <div class="impact-visual">
-                                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80" alt="Environmental Impact" class="img-fluid rounded">
+                                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb777b09?w=600&q=80"
+                                    alt="Environmental Impact" class="img-fluid rounded">
                             </div>
                         </div>
                     </div>
@@ -1851,7 +1978,8 @@
                     <div class="calculator-content">
                         <span class="section-badge">Smart Shopping</span>
                         <h2 class="section-title">See How Much You Save</h2>
-                        <p class="section-description">Compare refurbished vs new prices and see your environmental impact in real-time</p>
+                        <p class="section-description">Compare refurbished vs new prices and see your environmental
+                            impact in real-time</p>
 
                         <div class="calculator-widget">
                             <div class="calculator-input">
@@ -1906,7 +2034,8 @@
 
                 <div class="col-lg-6">
                     <div class="calculator-visual">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Savings Calculator" class="img-fluid rounded">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+                            alt="Savings Calculator" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
@@ -1919,7 +2048,8 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
                     <div class="quality-image">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="Quality Inspection" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80"
+                            alt="Quality Inspection" class="img-fluid">
                         <div class="quality-badge">
                             <i class="bi bi-award-fill"></i>
                             <div>
@@ -1934,7 +2064,8 @@
                     <div class="quality-content">
                         <span class="section-badge">Our Process</span>
                         <h2 class="section-title">Certified Quality You Can Trust</h2>
-                        <p class="section-description">Every device goes through our rigorous 45-point inspection process to ensure it meets our high standards.</p>
+                        <p class="section-description">Every device goes through our rigorous 45-point inspection
+                            process to ensure it meets our high standards.</p>
 
                         <div class="quality-steps">
                             <div class="quality-step">
@@ -1998,7 +2129,8 @@
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="testimonial-text">"Bought a MacBook Pro M3 and it's absolutely perfect! Looks brand new and saved me ₹80,000. The quality inspection report gave me complete confidence."</p>
+                        <p class="testimonial-text">"Bought a MacBook Pro M3 and it's absolutely perfect! Looks brand
+                            new and saved me ₹80,000. The quality inspection report gave me complete confidence."</p>
                         <div class="testimonial-author">
                             <img src="https://i.pravatar.cc/100?img=1" alt="Sarah Johnson">
                             <div>
@@ -2022,7 +2154,8 @@
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="testimonial-text">"Amazing service! My iPhone 15 Pro arrived in pristine condition. Battery health at 96% and it came with a full warranty. Highly recommend!"</p>
+                        <p class="testimonial-text">"Amazing service! My iPhone 15 Pro arrived in pristine condition.
+                            Battery health at 96% and it came with a full warranty. Highly recommend!"</p>
                         <div class="testimonial-author">
                             <img src="https://i.pravatar.cc/100?img=12" alt="Michael Chen">
                             <div>
@@ -2046,7 +2179,8 @@
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="testimonial-text">"Best decision ever! Got a Dell XPS for my daughter's college. It's perfect, and I love that we're helping the environment too. Win-win!"</p>
+                        <p class="testimonial-text">"Best decision ever! Got a Dell XPS for my daughter's college. It's
+                            perfect, and I love that we're helping the environment too. Win-win!"</p>
                         <div class="testimonial-author">
                             <img src="https://i.pravatar.cc/100?img=5" alt="Emily Rodriguez">
                             <div>
@@ -2078,65 +2212,77 @@
                     <div class="accordion" id="faqAccordion">
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
                                     What does "refurbished" mean?
                                 </button>
                             </h3>
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Refurbished devices are pre-owned electronics that have been professionally inspected, tested, cleaned, and restored to like-new condition. Every device goes through our rigorous 45-point inspection process and comes with a 1-year warranty.
+                                    Refurbished devices are pre-owned electronics that have been professionally
+                                    inspected, tested, cleaned, and restored to like-new condition. Every device goes
+                                    through our rigorous 45-point inspection process and comes with a 1-year warranty.
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
                                     What's included with my purchase?
                                 </button>
                             </h3>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Every purchase includes the device, a charging cable, 1-year warranty, 30-day money-back guarantee, and free shipping on orders over ₹40,000. Some devices may also include original accessories.
+                                    Every purchase includes the device, a charging cable, 1-year warranty, 30-day
+                                    money-back guarantee, and free shipping on orders over ₹40,000. Some devices may
+                                    also include original accessories.
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
                                     What if I'm not satisfied with my purchase?
                                 </button>
                             </h3>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    We offer a 30-day money-back guarantee, no questions asked. If you're not completely satisfied, simply return the device in its original condition for a full refund.
+                                    We offer a 30-day money-back guarantee, no questions asked. If you're not completely
+                                    satisfied, simply return the device in its original condition for a full refund.
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
                                     How long does shipping take?
                                 </button>
                             </h3>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Standard shipping takes 3-5 business days. Express shipping (1-2 days) is available at checkout. All orders over ₹40,000 qualify for free standard shipping.
+                                    Standard shipping takes 3-5 business days. Express shipping (1-2 days) is available
+                                    at checkout. All orders over ₹40,000 qualify for free standard shipping.
                                 </div>
                             </div>
                         </div>
 
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq5">
                                     Are the devices unlocked?
                                 </button>
                             </h3>
                             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Most of our phones are carrier-unlocked and will work with any carrier. Product listings clearly indicate if a device is locked to a specific carrier.
+                                    Most of our phones are carrier-unlocked and will work with any carrier. Product
+                                    listings clearly indicate if a device is locked to a specific carrier.
                                 </div>
                             </div>
                         </div>
@@ -2153,7 +2299,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <h2>Get Exclusive Deals</h2>
-                        <p>Subscribe to our newsletter and get 10% off your first order plus early access to flash sales!</p>
+                        <p>Subscribe to our newsletter and get 10% off your first order plus early access to flash
+                            sales!</p>
                     </div>
                     <div class="col-lg-6">
                         <form class="newsletter-form">
@@ -2170,14 +2317,16 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer py-5 bg-dark text-white">
         <div class="container-fluid px-5">
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                    <img src="refurbazaar-20final-20logo.png" alt="RefurBazaar" height="50" class="mb-3" style="filter: brightness(0) invert(1);">
-                    <p class="text-light">Your trusted marketplace for certified refurbished electronics. Quality devices at unbeatable prices.</p>
+                    <img src="refurbazaar-20final-20logo.png" alt="RefurBazaar" height="100" class="mb-3"
+                        style="filter: brightness(0) invert(1);">
+                    <p class="text-light">Your trusted marketplace for certified refurbished electronics. Quality
+                        devices at unbeatable prices.</p>
                     <div class="social-links mt-3">
                         <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
                         <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
@@ -2185,7 +2334,7 @@
                         <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
                     <h5 class="fw-bold mb-3">Quick Links</h5>
                     <ul class="list-unstyled">
@@ -2196,7 +2345,7 @@
                         <li><a href="#" class="text-light text-decoration-none d-block mb-2">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
                     <h5 class="fw-bold mb-3">Customer Support</h5>
                     <ul class="list-unstyled">
@@ -2207,7 +2356,7 @@
                         <li><a href="#" class="text-light text-decoration-none d-block mb-2">Track Order</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
                     <h5 class="fw-bold mb-3">Newsletter</h5>
                     <p class="text-light">Subscribe to get special offers and updates</p>
@@ -2223,12 +2372,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <hr class="my-4 bg-light">
-            
+
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0 text-light">&copy; 2025 RefurBazaar. All rights reserved.</p>
+                    <p class="mb-0 text-light">&copy; 2026 RefurBazaar. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
@@ -2238,9 +2387,10 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
