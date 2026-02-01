@@ -285,3 +285,44 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 })
+
+
+/* =========================================
+   QUALITY MODAL LOGIC
+   ========================================= */
+function openQualityModal() {
+    const modal = document.getElementById('qualityModal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Stop scrolling
+    }
+}
+
+function closeQualityModal(event) {
+    // Close if clicked on overlay OR close button
+    if (event.target.id === 'qualityModal' || event.target.closest('.modal-close-btn')) {
+        const modal = document.getElementById('qualityModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+    }
+}
+
+
+// Initialize New Category Carousels
+  const iphonesCarousel = document.getElementById("iphonesCarousel")
+  if (iphonesCarousel) {
+    new bootstrap.Carousel(iphonesCarousel, {
+      interval: false, // Don't auto-slide
+      wrap: true
+    })
+  }
+
+  const samsungCarousel = document.getElementById("samsungCarousel")
+  if (samsungCarousel) {
+    new bootstrap.Carousel(samsungCarousel, {
+      interval: false,
+      wrap: true
+    })
+  }
