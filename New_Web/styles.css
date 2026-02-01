@@ -392,7 +392,7 @@ a {
 }
 
 .brand-logo img {
-  height: 40px;
+  height: 60px;
   width: auto;
   object-fit: contain;
 }
@@ -458,7 +458,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 0.65rem;
+  font-size: 0.9rem !important;
   padding: 0.25em 0.5em;
   transform: translate(25%, -25%);
   background-color: #dc3545;
@@ -613,6 +613,10 @@ a {
 }
 
 /* Hero Badges */
+.badge {
+  font-size: 1.2rem;
+}
+
 .badge.bg-danger {
   background-color: #fff !important;
   color: #dc2626 !important;
@@ -1158,440 +1162,912 @@ a {
 }
 
 /* =========================================
-   12. IMPACT TRACKER SECTION
+   20. NEW RENEWED BANNER STYLES
    ========================================= */
-.impact-section {
-  background-color: #f8fcf9;
-  border-top: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
+.renewed-banner-wrapper {
+    cursor: pointer;
+    perspective: 1000px;
 }
 
-@media (min-width: 992px) {
-  .border-end-lg {
-    border-right: 2px solid #e5e7eb;
-  }
+.renewed-banner {
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+    border: 1px solid #bbf7d0;
+    border-left: 5px solid var(--primary-green); /* Accent Line */
+    border-radius: 12px;
+    padding: 20px 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
-.live-indicator {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #def7ec;
-  padding: 4px 10px;
-  border-radius: 20px;
+.renewed-banner:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.15);
+    border-color: var(--primary-green);
 }
 
-.live-text {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--primary-green);
-  letter-spacing: 0.5px;
+/* The "Verified" Stamp in background */
+.renewed-bg-stamp {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    font-size: 8rem;
+    color: rgba(34, 197, 94, 0.05); /* Very faint green */
+    transform: rotate(15deg);
+    pointer-events: none;
 }
 
-.pulse-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--error);
-  border-radius: 50%;
-  animation: pulse-red 2s infinite;
+.renewed-icon-box {
+    width: 48px;
+    height: 48px;
+    background: rgba(111, 186, 44, 0.15);
+    color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
 }
 
-@keyframes pulse-red {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
-  }
-
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
-  }
+.renewed-text h5 {
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 2px;
+    font-size: 1.1rem;
 }
 
-.impact-icon-box {
-  width: 50px;
-  height: 50px;
-  background: white;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+.renewed-text p {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    margin-bottom: 0;
 }
 
-.impact-text h3 {
-  font-size: 1.8rem;
-  line-height: 1;
+.renewed-action {
+    font-weight: 700;
+    color: var(--primary-green);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.2s;
 }
 
-.impact-text .unit {
-  font-size: 1rem;
-  color: var(--gray-500);
-  font-weight: 600;
+.renewed-banner:hover .renewed-action {
+    gap: 12px; /* Arrow moves on hover */
 }
 
 @media (max-width: 768px) {
-  .impact-icon-box {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-  }
-
-  .impact-metric-item {
-    flex-direction: column;
-    gap: 5px !important;
-  }
-
-  .impact-text h3 {
-    font-size: 1.4rem;
-  }
+    .renewed-content-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .renewed-action {
+        justify-content: center;
+    }
 }
 
 /* =========================================
-   13. CALCULATOR SECTION
+   12. COMPACT IMPACT TRACKER
+   ========================================= */
+.impact-section {
+    background: linear-gradient(90deg, #064e3b 0%, #065f46 100%); /* Horizontal Gradient */
+    color: white;
+    padding: 50px 0; /* Reduced from 80px */
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* The Live Badge - Smaller & Tighter */
+.live-tracker-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(5px);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* Compact Metrics */
+.impact-metric-compact {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align on desktop */
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.impact-metric-compact:last-child {
+    border-right: none;
+}
+
+.impact-number {
+    font-size: 2rem; /* Reduced from 3rem */
+    font-weight: 800;
+    line-height: 1.1;
+    background: linear-gradient(to bottom, #ffffff, #a7f3d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
+}
+
+.impact-label {
+    font-size: 0.85rem;
+    color: #a7f3d0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.impact-icon-small {
+    font-size: 1.2rem;
+    color: #34d399;
+    margin-bottom: 8px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+    .impact-section {
+        text-align: center;
+        padding: 60px 0;
+    }
+    
+    .impact-metric-compact {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding: 20px 0;
+        flex-direction: row; /* Horizontal on mobile for better space usage */
+        gap: 20px;
+        text-align: left;
+    }
+    
+    .impact-metric-compact:last-child {
+        border-bottom: none;
+    }
+}
+
+/* =========================================
+   13. PREMIUM CALCULATOR DASHBOARD
    ========================================= */
 .calculator-section {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #e6f2ff 0%, #e9f7ef 100%);
+    padding: 80px 0;
+    background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+    position: relative;
 }
 
-.calculator-widget {
-  background: white;
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+.calculator-wrapper {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+    padding: 40px;
 }
 
-.calculator-input {
-  margin-bottom: 24px;
+/* Custom Select Styling */
+.calc-select-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
 }
 
-.calculator-input label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--dark);
+.calc-form-select {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark);
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    background-color: #f9fafb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px 12px;
+    appearance: none;
 }
 
-.calculator-input input,
-.calculator-input select {
-  width: 100%;
-  padding: 12px 16px;
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s ease;
+.calc-form-select:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(111, 186, 44, 0.1);
+    outline: none;
+    background-color: white;
 }
 
-.calculator-input input:focus,
-.calculator-input select:focus {
-  outline: none;
-  border-color: var(--primary-green);
-  box-shadow: 0 0 0 3px rgba(111, 186, 44, 0.1);
+/* The "You Save" Highlight Card */
+.savings-highlight-card {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #5da024 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(111, 186, 44, 0.3);
 }
 
-.calculator-results {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 32px;
+.savings-highlight-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
 }
 
-.result-item {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
+.savings-label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.result-item.highlight {
-  background: linear-gradient(135deg, var(--primary-green), #5da024);
-  color: white;
+.savings-value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 10px;
 }
 
-.result-label {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  opacity: 0.8;
+.savings-pill {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-block;
+    margin: 0 auto;
 }
 
-.result-value {
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--dark);
+/* Comparison Stats (Price, CO2, etc) */
+.stat-card {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+    border: 1px solid transparent;
 }
 
-.result-item.highlight .result-value {
-  color: white;
+.stat-card:hover {
+    background: white;
+    border-color: #e5e7eb;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transform: translateY(-3px);
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--gray-500);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+/* Visual Bar Chart */
+.price-bar-container {
+    background: #f1f5f9;
+    height: 12px;
+    border-radius: 50px;
+    margin: 25px 0 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-bar-fill {
+    background: var(--primary-green);
+    height: 100%;
+    border-radius: 50px;
+    width: 0%; /* JS will animate this */
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gray-500);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .calculator-wrapper {
+        padding: 25px;
+    }
+    
+    .savings-value {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 767px) {
-  .calculator-results {
-    grid-template-columns: 1fr;
-  }
-
-  .calculator-widget {
-    padding: 20px;
-  }
+    .calculator-section {
+        padding: 50px 0;
+    }
+    
+    .calc-select-wrapper {
+        margin-bottom: 30px;
+    }
+    
+    /* On mobile, stack the comparison cards nicely */
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .stat-value {
+        font-size: 1.2rem;
+    }
 }
 
 /* =========================================
-   14. REFURBAZAAR CARE (PROTECTION)
+   18. PREMIUM CARE SECTION (Dark Mode)
    ========================================= */
 .care-section {
-  padding: 4rem 0;
-  overflow: hidden;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Deep Slate Blue */
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Glow Effect */
+.care-section::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(111, 186, 44, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.care-tag {
+    background: rgba(111, 186, 44, 0.2);
+    color: var(--primary-green);
+    border: 1px solid rgba(111, 186, 44, 0.3);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+/* Glassmorphism Feature Cards */
+.care-feature-card {
+    background: rgba(255, 255, 255, 0.03); /* Extremely subtle white */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.care-feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-green);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.care-icon-box {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-green), #4d8f1e);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(111, 186, 44, 0.3);
+}
+
+.care-feature-card h5 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.care-feature-card p {
+    color: #94a3b8; /* Slate gray text */
+    font-size: 1rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Button override for dark bg */
+.btn-care-outline {
+    border: 2px solid rgba(255,255,255,0.2);
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-care-outline:hover {
+    background: white;
+    color: var(--dark);
+    border-color: white;
+}
+
+@media (max-width: 991px) {
+    .care-section {
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .care-feature-card {
+        text-align: left; /* Keep cards readable */
+    }
 }
 
 /* =========================================
-   15. TESTIMONIALS SECTION
+   15. PREMIUM TESTIMONIALS (RESPONSIVE)
    ========================================= */
 .testimonials-section {
-  padding: 80px 0;
-  background: #f8f9fa;
+    padding: 100px 0;
+    background: #f9fafb; /* Light gray base */
+    position: relative;
+    overflow: hidden;
 }
 
+/* Subtle Dot Pattern Background */
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* The Trust Header Badge (Rated 4.8/5) */
+.trust-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Wraps on tiny screens */
+    justify-content: center;
+}
+
+.star-row {
+    color: #fbbf24; /* Gold Star Color */
+    font-size: 1.1rem;
+    display: flex;
+    gap: 2px;
+}
+
+/* The Review Card */
 .testimonial-card {
-  background: white;
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+    background: white;
+    padding: 40px 32px;
+    border-radius: 24px;
+    height: 100%;
+    border: 1px solid #f3f4f6;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
 
+/* Hover Lift Effect */
 .testimonial-card:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  transform: translateY(-8px);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -5px rgba(0,0,0,0.08);
+    border-color: rgba(111, 186, 44, 0.4); /* Green border on hover */
 }
 
-.testimonial-rating {
-  display: flex;
-  gap: 4px;
-  margin-bottom: 16px;
+/* Profile Section */
+.reviewer-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
 }
 
-.testimonial-rating i {
-  color: #fbbf24;
-  font-size: 18px;
+.reviewer-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f9fafb;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.testimonial-text {
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--gray);
-  margin-bottom: 24px;
-  flex: 1;
+.reviewer-meta h6 {
+    font-weight: 800;
+    margin-bottom: 2px;
+    color: #111827;
+    font-size: 1.05rem;
 }
 
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
+.verified-badge {
+    font-size: 0.8rem;
+    color: var(--primary-green);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(111, 186, 44, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    width: fit-content;
 }
 
-.testimonial-author img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
+/* Product Purchased Pill */
+.product-pill {
+    display: inline-block;
+    background: #f3f4f6;
+    color: #374151;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
 }
 
-.testimonial-author h5 {
-  font-size: 16px;
-  margin-bottom: 4px;
-  color: var(--dark);
+.review-text {
+    color: #4b5563;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 0;
 }
 
-.testimonial-author p {
-  font-size: 14px;
-  color: var(--gray);
-  margin: 0;
+/* Large Quote Icon */
+.quote-icon {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    font-size: 4rem;
+    color: #f3f4f6;
+    font-family: serif;
+    line-height: 1;
+    z-index: -1;
 }
 
-.testimonial-verified {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--primary-green);
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.testimonial-verified i {
-  font-size: 18px;
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 991px) {
+    .testimonial-card {
+        padding: 30px 24px; /* Slightly less padding on tablet */
+    }
 }
 
 @media (max-width: 767px) {
-  .testimonial-author {
-    flex-direction: column;
-    text-align: center;
-  }
+    .testimonials-section {
+        padding: 60px 0; /* Less vertical space on mobile */
+    }
+    
+    .trust-header-badge {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+    }
+    
+    .reviewer-meta h6 {
+        font-size: 1rem;
+    }
 
-  .testimonial-verified {
-    justify-content: center;
-  }
+    .testimonial-card {
+        padding: 24px; /* Compact padding for mobile */
+        border-radius: 20px;
+    }
 }
 
 /* =========================================
-   16. FAQ SECTION
+   16. PREMIUM FAQ SECTION
    ========================================= */
 .faq-section {
-  padding: 80px 0;
-  background: #f8f9fa;
+    padding: 100px 0;
+    background-color: #f8f9fa; /* Light gray background */
 }
 
-.faq-item {
-  background: white;
-  border-radius: 12px;
-  margin-bottom: 16px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+/* The Sticky Left Sidebar */
+.faq-sticky-sidebar {
+    position: sticky;
+    top: 120px; /* Stays visible when scrolling */
 }
 
-.faq-question {
-  width: 100%;
-  padding: 20px 24px;
-  text-align: left;
-  background: white;
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dark);
-  transition: all 0.3s ease;
+.support-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
 
-.faq-question:hover {
-  background: #f8f9fa;
+.support-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-green);
 }
 
-.faq-question i {
-  font-size: 20px;
-  color: var(--primary-green);
-  transition: transform 0.3s ease;
+/* The Right Side Accordion Items */
+.custom-accordion .accordion-item {
+    border: 1px solid #f3f4f6; /* Subtle border */
+    border-radius: 16px !important; /* Rounded corners */
+    margin-bottom: 16px; /* Space between items */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    overflow: hidden;
+    background: white;
 }
 
-.faq-question.active i {
-  transform: rotate(180deg);
+/* Remove the default line between items */
+.custom-accordion .accordion-item:not(:first-of-type) {
+    border-top: 1px solid #f3f4f6; 
 }
 
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-  padding: 0 24px;
+/* The Button Styling */
+.custom-accordion .accordion-button {
+    background: white;
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 24px;
+    box-shadow: none !important; /* Remove blue glow */
 }
 
-.faq-answer.show {
-  max-height: 200px;
-  padding: 15px 24px 20px;
+/* Active State (When Open) */
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: var(--primary-green);
+    background: #f9fafb; /* Very light gray when open */
 }
 
-.faq-answer p {
-  font-size: 16px;
-  color: var(--gray);
-  line-height: 1.6;
-  margin-bottom: 0;
+/* Remove the default thin blue border line */
+.accordion-button:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* The Content */
+.custom-accordion .accordion-body {
+    padding: 0 24px 24px 24px;
+    color: #6b7280;
+    line-height: 1.7;
+    background: #f9fafb;
+}
+
+@media (max-width: 991px) {
+    .faq-sticky-sidebar {
+        position: static;
+        margin-bottom: 40px;
+    }
 }
 
 /* =========================================
-   17. FOOTER
+   17. EYE-CATCHING "FLOATING" FOOTER
    ========================================= */
 footer {
-  background: var(--dark-blue);
-  color: white;
-  padding: 60px 0;
-  font-size: 15px;
+    background-color: #ffffff;
+    color: #4b5563; /* Gray-600 */
+    position: relative;
+    padding-top: 160px; /* Space for the floating box */
+    padding-bottom: 40px;
+    margin-top: 100px; /* Push footer down to make room for overlapping box */
+    border-top: 1px solid #f3f4f6;
+}
+
+/* The Floating Newsletter Card */
+.footer-newsletter-card {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #3b82f6 100%);
+    border-radius: 24px;
+    padding: 40px;
+    position: absolute;
+    top: -80px; /* Moves it UP to overlap sections */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 20px 40px rgba(111, 186, 44, 0.25);
+    color: white;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Abstract shapes on the card */
+.footer-newsletter-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.newsletter-input-group .form-control {
+    border: none;
+    border-radius: 50px 0 0 50px;
+    padding: 15px 25px;
+    height: 55px;
+}
+
+.newsletter-input-group .btn {
+    border-radius: 0 50px 50px 0;
+    background: #1f2937; /* Dark button for contrast */
+    color: white;
+    padding: 0 30px;
+    font-weight: 700;
+    border: none;
+    transition: background 0.3s;
+}
+
+.newsletter-input-group .btn:hover {
+    background: black;
+}
+
+/* Footer Links Styling */
+footer h5 {
+    color: #111827; /* Dark almost black */
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
 }
 
 footer a {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: #6b7280;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 500;
 }
 
 footer a:hover {
-  color: white;
+    color: var(--primary-green);
+    transform: translateX(5px);
 }
 
-footer .list-unstyled li {
-  margin-bottom: 10px;
+/* Brand Colors Social Icons */
+.social-icon-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    background: #f3f4f6;
+    color: #374151;
 }
 
-footer .footer-logo {
-  max-width: 150px;
-  margin-bottom: 20px;
-}
-
-footer .social-icons a {
-  display: inline-flex;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  font-size: 18px;
-  color: white;
-  transition: background 0.3s ease;
-}
-
-footer .social-icons a:hover {
-  background: var(--primary-green);
-}
+.social-icon-btn.fb:hover { background: #1877f2; color: white; }
+.social-icon-btn.tw:hover { background: #1da1f2; color: white; }
+.social-icon-btn.in:hover { background: #e1306c; color: white; }
+.social-icon-btn.li:hover { background: #0077b5; color: white; }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 25px;
-  margin-top: 40px;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e7eb;
 }
 
-.payment-methods p {
-  font-size: 1.1rem;
-  font-weight: 700;
-}
+/* --- RESPONSIVENESS FIXES --- */
+@media (max-width: 991px) {
+    footer {
+        padding-top: 240px; /* More space for stacked content */
+        margin-top: 150px;
+    }
+    
+    .footer-newsletter-card {
+        top: -120px;
+        padding: 30px 20px;
+        text-align: center;
+    }
 
-.payment-methods img {
-  max-height: 30px;
-  margin-left: 10px;
-  opacity: 0.8;
+    .newsletter-form-wrapper {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 767px) {
-  footer {
-    padding: 40px 0;
-    text-align: center;
-  }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
 
-  footer .text-start {
-    text-align: center !important;
-  }
-
-  footer .social-icons {
+/* =========================================
+   18. BACK TO TOP BUTTON
+   ========================================= */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
-  }
+    font-size: 1.2rem;
+    text-decoration: none;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(111, 186, 44, 0.4);
+    border: 2px solid white;
+}
 
-  .payment-methods {
-    justify-content: center;
-    margin-top: 20px;
-  }
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #5da024;
+    color: white;
+    transform: translateY(-5px);
 }
 
 /* =========================================

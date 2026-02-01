@@ -228,25 +228,46 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
+  /* =========================================
+     CALCULATOR LOGIC UPDATE
+     ========================================= */
   const deviceSelect = document.getElementById("deviceSelect")
   if (deviceSelect) {
-    deviceSelect.addEventListener("change", function () {
-      const values = this.value.split(",")
+    // Function to update UI
+    const updateCalculator = () => {
+      const values = deviceSelect.value.split(",")
       const refurbPrice = Number.parseInt(values[0])
       const newPrice = Number.parseInt(values[1])
 
       const savings = newPrice - refurbPrice
       const discountPercent = Math.round((savings / newPrice) * 100)
-      const co2 = Math.round(newPrice * 0.00026) // Approximate CO2 calculation
-      const waste = (newPrice * 0.000014).toFixed(1) // Approximate e-waste calculation
+      
+      // Environmental math (approximate)
+      const co2 = Math.round(newPrice * 0.00026) 
+      const waste = (newPrice * 0.000014).toFixed(1)
 
+      // Update Text
       document.querySelector(".new-price-display").textContent = `₹${newPrice.toLocaleString()}`
       document.querySelector(".refurb-price").textContent = `₹${refurbPrice.toLocaleString()}`
       document.querySelector(".savings").textContent = `₹${savings.toLocaleString()}`
       document.querySelector(".discount-percent").textContent = `${discountPercent}%`
       document.querySelector(".co2").textContent = `${co2} kg`
       document.querySelector(".waste").textContent = `${waste} kg`
-    })
+
+      // --- NEW: Animate the Progress Bar ---
+      // The bar represents the % of the price you pay vs new
+      const payPercent = Math.round((refurbPrice / newPrice) * 100);
+      const savingsBar = document.getElementById("savingsBar");
+      if(savingsBar) {
+          savingsBar.style.width = `${payPercent}%`;
+      }
+    };
+
+    // Listen for changes
+    deviceSelect.addEventListener("change", updateCalculator);
+    
+    // Run once on load to set initial state
+    updateCalculator();
   }
 
   function animateCounter(element) {
@@ -311,18 +332,43 @@ function closeQualityModal(event) {
 
 
 // Initialize New Category Carousels
-  const iphonesCarousel = document.getElementById("iphonesCarousel")
-  if (iphonesCarousel) {
-    new bootstrap.Carousel(iphonesCarousel, {
-      interval: false, // Don't auto-slide
-      wrap: true
-    })
-  }
+const iphonesCarousel = document.getElementById("iphonesCarousel")
+if (iphonesCarousel) {
+  new bootstrap.Carousel(iphonesCarousel, {
+    interval: false, // Don't auto-slide
+    wrap: true
+  })
+}
 
-  const samsungCarousel = document.getElementById("samsungCarousel")
-  if (samsungCarousel) {
-    new bootstrap.Carousel(samsungCarousel, {
-      interval: false,
-      wrap: true
-    })
-  }
+const samsungCarousel = document.getElementById("samsungCarousel")
+if (samsungCarousel) {
+  new bootstrap.Carousel(samsungCarousel, {
+    interval: false,
+    wrap: true
+  })
+}
+
+/* =========================================
+  BACK TO TOP LOGIC
+========================================= */
+const backToTopBtn = document.getElementById("backToTop");
+
+if (backToTopBtn) {
+  // Show button when scrolling down 300px
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  // Smooth scroll to top on click
+  backToTopBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
