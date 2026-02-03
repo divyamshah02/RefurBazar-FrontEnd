@@ -372,3 +372,62 @@ if (backToTopBtn) {
     });
   });
 }
+
+/* =========================================
+   LIVE COUNTDOWN TIMER (Fixed Date)
+   ========================================= */
+function startCountdown() {
+    // -----------------------------------------------------------------
+    // CONFIGURATION: Set your specific end date here
+    // Format: (Year, MonthIndex, Day, Hour, Minute, Second)
+    // IMPORTANT: Month is 0-indexed (0 = Jan, 1 = Feb, ... 11 = Dec)
+    // Example below: February 14, 2026 at 11:59:59 PM
+    // -----------------------------------------------------------------
+    const deadline = new Date(2026, 1, 14, 23, 59, 59); 
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const t = deadline.getTime() - now;
+
+        // If the sale is over
+        if (t < 0) {
+            clearInterval(timerInterval);
+            
+            // Optional: Change text to "EXPIRED" or "00"
+            const parts = document.querySelectorAll('.timer-part');
+            parts.forEach(part => part.textContent = "00");
+            
+            const mobileTimer = document.querySelector('.compact-timer.d-md-none span');
+            if (mobileTimer) mobileTimer.textContent = "Sale Ended";
+            
+            return;
+        }
+
+        // Calculate time parts
+        const days = Math.floor(t / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+        // Update Desktop Timer (The red boxes)
+        const parts = document.querySelectorAll('.timer-part');
+        if (parts.length >= 4) {
+            parts[0].textContent = days.toString().padStart(2, '0');
+            parts[1].textContent = hours.toString().padStart(2, '0');
+            parts[2].textContent = minutes.toString().padStart(2, '0');
+            parts[3].textContent = seconds.toString().padStart(2, '0');
+        }
+
+        // Update Mobile Timer (The text strip)
+        const mobileTimer = document.querySelector('.compact-timer.d-md-none span');
+        if (mobileTimer) {
+            mobileTimer.textContent = `Ends in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+    }
+
+    updateTimer(); // Run immediately so there is no 1-second delay
+    const timerInterval = setInterval(updateTimer, 1000);
+}
+
+// Start the timer
+startCountdown();
